@@ -5,3 +5,8 @@ cabal-dev
 *.chi
 *.chs.h
 .virthualenv
+
+# Hakyll .gitignore
+_cache
+_site
+site

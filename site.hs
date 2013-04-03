@@ -15,8 +15,14 @@ main = hakyll $ do
         route   idRoute
         compile compressCssCompiler
 
-    match (fromList ["about.rst", "contact.markdown"]) $ do
-        route   $ setExtension "html"
+    match "javascript/*" $ do
+        route   idRoute
+        compile copyFileCompiler
+
+    -- Static webpages compiled through Pandoc
+    match (fromList ["cv.md"]) $ do
+        --route   $ setExtension "html"
+        route   $ setExtension ""
         compile $ pandocCompiler
             >>= loadAndApplyTemplate "templates/default.html" defaultContext
             >>= relativizeUrls
@@ -28,12 +34,12 @@ main = hakyll $ do
             >>= loadAndApplyTemplate "templates/default.html" postCtx
             >>= relativizeUrls
 
-    create ["archive.html"] $ do
+    create ["archive"] $ do
         route idRoute
         compile $ do
             let archiveCtx =
                     field "posts" (\_ -> postList recentFirst) `mappend`
-                    constField "title" "Archives"              `mappend`
+                    constField "title" "Post archive"          `mappend`
                     defaultContext
 
             makeItem ""
