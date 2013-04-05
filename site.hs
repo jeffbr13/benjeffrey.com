@@ -38,8 +38,9 @@ main = hakyll $ do
         route idRoute
         compile $ do
             let archiveCtx =
-                    field "posts" (\_ -> postList recentFirst) `mappend`
-                    constField "title" "Post archive"          `mappend`
+                    field "posts" (\_ -> postList recentFirst)          `mappend`
+                    constField "title" "Posts archive"                   `mappend`
+                    constField "description" "Previous posts on benjeffrey.com"  `mappend`
                     defaultContext
 
             makeItem ""
