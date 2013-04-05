@@ -3,4 +3,5 @@
 /* SITE */
   Standards: HTML5, CSS3
   Components: Foundation (incl. jQuery, Orbit, Reveal)
-  Software: Hakyll, NGinx, Compass & Sass, Sublime Text 2, Git
+  Software: Hakyll, NGinx, Compass & Sass, Sublime Text 2, Git, font-combinator.com
+  Color-scheme: [Just the Facts II](http://www.colourlovers.com/palette/1217945/Just_the_Facts_II)
