@@ -18,7 +18,9 @@
 // $body-bg: #fff;
 // $body-font-color: #222;
 // $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$body-font-family: "Droid Serif", serif;
 // $body-font-weight: normal;
+$body-font-weight: 400;
 // $body-font-style: normal;
 
 // We use this to control font-smoothing
@@ -29,9 +31,15 @@
 
 // We use these as default colors throughout
 // $primary-color: #2ba6cb;
+$primary-color: rgb(22,117,161);
 // $secondary-color: #e9e9e9;
+$secondary-color: rgb(255,211,0);
 // $alert-color: #c60f13;
 // $success-color: #5da423;
+// Colour-scheme from http://www.colourlovers.com/palette/1217945/Just_the_Facts_II
+$tertiary-color: rgb(51,162,56);
+$quaternary-color: rgb(217,235,195);
+$background-color: rgb(255,250,240);
 
 // We use these to make sure border radius matches unless we want it different.
 // $global-radius: 3px;
@@ -118,6 +126,7 @@
 // $paragraph-font-weight: normal;
 // $paragraph-font-size: 1em;
 // $paragraph-line-height: 1.6;
+$paragraph-line-height: 1.41;
 // $paragraph-margin-bottom: emCalc(20px);
 // $paragraph-aside-font-size: emCalc(14px);
 // $paragraph-aside-line-height: 1.35;
@@ -126,6 +135,7 @@
 // We use these to style <code> tags
 // $code-color: darken($alert-color, 15%);
 // $code-font-family: Consolas, 'Liberation Mono', Courier, monospace;
+$code-font-family: "DejaVu Sans Mono", "Monaco" monospace;
 // $code-font-weight: bold;
 
 // We use these to style anchors
