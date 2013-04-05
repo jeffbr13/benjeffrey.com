@@ -44,3 +44,79 @@
 // @import "foundation/components/tooltips";
 // @import "foundation/components/dropdown";
 
+// Typefaces!
+@import url(http://fonts.googleapis.com/css?family=Crete+Round:400,400italic|Inconsolata:400,700);
+
+
+nav {
+    @include grid-row;
+
+    padding-bottom: 0.85em;
+
+    background-color: $primary-color;
+    border-bottom: solid $yellow 1em;
+
+    font-family: $header-font-family;
+    font-size: emCalc(37px);
+
+    .navigation-list {
+        @include grid-column($columns:12, $last-column:true, $center:true);
+
+        ul {
+            margin: 1em;
+            line-height: $topbar-height;
+
+            list-style-type: none;
+
+            .home {
+                font-size: $topbar-title-font-size;
+                font-weight: $topbar-title-weight;
+                display: block;
+            }
+
+            li {
+                float: $default-float;
+            }
+
+            .pages {
+                float: right;
+
+                li {
+                    margin-left: 1em;
+                }
+            }
+
+            a {
+                color: $light;
+                &:hover,
+                &:focus {
+                    color: darken($light, 2%);
+                }
+            }
+        }
+    }
+}
+
+header {
+    @include grid-row;
+
+    .page-title {
+        @include grid-column($columns:12, $last-column:true, $center:true);
+
+        h1 {
+            margin-top: 0.75em;
+            line-height: 1;
+            font-weight: bold;
+            text-align: center;
+        }
+
+    }
+}
+
+
+.content {
+    @include grid-row;
+    .column {
+        @include grid-column($columns:7, $last-column:true, $center:true);
+    }
+}
