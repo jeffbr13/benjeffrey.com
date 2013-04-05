@@ -6,7 +6,11 @@ cabal-dev
 *.chs.h
 .virthualenv
 
-# Hakyll .gitignore
+# compiled site (Hakyll)
 _cache
 _site
 site
+
+# compiled CSS
+css
+

@@ -15,7 +15,12 @@ main = hakyll $ do
         route   idRoute
         compile compressCssCompiler
 
-    match "javascript/*" $ do
+    match "js/*" $ do
+        route   idRoute
+        compile copyFileCompiler
+
+    -- static files
+    match (fromList ["humans.txt", "robots.txt"]) $ do
         route   idRoute
         compile copyFileCompiler
 
