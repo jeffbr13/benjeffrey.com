@@ -22,13 +22,13 @@ Skill-stacks
 * web design with CSS and SCSS
 * interactive pages with JavaScript
 * static blogs and websites using Hakyll
-* running (not developing) Wordpress-based sites
+* running (but not custom development for) Wordpress-based sites
 
 ### Server Administration
 
 * Git/SSH-based development/deployment workflow
 * Saltstack automatic server configuration
-* Apache & NGinx for running static websites
+* Apache & Nginx for running static websites
 * basic CentOS & Ubuntu Server configuration
 * I run Arch Linux on my laptop from time to time!
 
