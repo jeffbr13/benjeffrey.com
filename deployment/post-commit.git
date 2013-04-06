@@ -11,6 +11,6 @@ echo "\nRebuilding site..."
 echo "\nUploading site..."
 scp -rC ./_site/* parsley:/var/www/benjeffrey.com/
 echo "\nUploading Nginx configuration..."
-scp -C ./deployment/site.nginx parsley:/etc/nginx/sites_enabled/benjeffrey.tld
+scp -C ./deployment/site.nginx parsley:/etc/nginx/sites_enabled/benjeffrey.com
 echo "\nSite upload complete! Check it out at http://benjeffrey.com"
 echo "********************************************************************************"
