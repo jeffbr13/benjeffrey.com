@@ -47,7 +47,7 @@
 // Typefaces!
 @import url(http://fonts.googleapis.com/css?family=Crete+Round:400,400italic|Inconsolata:400,700);
 
-
+// Navigation row
 nav {
     @include grid-row;
 
@@ -97,6 +97,7 @@ nav {
     }
 }
 
+// Page title and header
 header {
     @include grid-row;
 
@@ -114,9 +115,22 @@ header {
 }
 
 
+// Main body content
 .content {
     @include grid-row;
     .column {
         @include grid-column($columns:7, $last-column:true, $center:true);
+    }
+}
+
+// Sticky footer!
+@import "compass/layout";
+@include sticky-footer(8em, ".wrapper", ".push", "footer");
+footer {
+    padding-top: 2em;
+    background-color: $green-light;
+    text-align: center;
+
+    p {
     }
 }
