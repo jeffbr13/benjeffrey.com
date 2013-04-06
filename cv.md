@@ -5,13 +5,24 @@ description: Where Ben Jeffrey has been, and what he's done.
 
 Hey there. I'm Ben.
 
-I'm currently studying for my Master of Informatics at the University of
-Edinburgh.
+I'm currently studying for my Master of Informatics degree at the
+University of Edinburgh.
 
 I'm a hands-on learner and a methodical worker. I rather enjoy operating
 in high-pressure situations and tight turnaround times, with skilled and
 friendly people.
 
+<aside class="right">
+    <ul class="vcard">
+      <li class="fn">Ben Jeffrey</li>
+      <li class="nickname">jeffbr13</li>
+      <li class="locality">Edinburgh</li>
+      <li class="country-name">United Kingdom</li>
+      <li class="tel">07974607509</li>
+      <li><a href="mailto:mail@benjeffrey.net" class="email">mail@benjeffrey.net</a></li>
+      <li><a class="url" href="http://benjeffrey.com">http://benjeffrey.com</a></li>
+    </ul>
+</aside>
 
 Skill-stacks
 ------------
