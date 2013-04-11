@@ -29,17 +29,12 @@ $body-font-family: "Droid Serif", Georgia, serif;
 // $text-direction: ltr;
 
 
-// Colour-scheme! Taken from http://www.colourlovers.com/palette/1217945/Just_the_Facts_II
-$green: rgb(51,162,56);
-$green-light: rgb(217,235,195);
-$yellow: rgb(255,211,0);
-$light: rgb(255,250,240);
-$blue: rgb(22,117,161);
-
-$primary-color: $blue;
-$secondary-color: $yellow;
-$body-bg: $light;
-$alert-color: $green;
+// http://www.colourlovers.com/palette/1213712/Overstated
+$primary-color: rgb(46,112,96);
+$secondary-color: rgb(206,193,177);
+$footer-color: rgb(77,40,45);
+$alert-color: rgb(102,153,204);
+$body-bg: rgb(255,255,255);
 // We use these as default colors throughout
 // $primary-color: #2ba6cb;
 // $secondary-color: #e9e9e9;
@@ -142,11 +137,10 @@ $paragraph-line-height: 1.41;
 
 // We use these to style <code> tags
 // $code-color: darken($alert-color, 10%);
-$code-color: $green;
+$code-color: $alert-color;
 // $code-font-family: Consolas, 'Liberation Mono', Courier, monospace;
-$code-font-family: "Droid Sans Mono", "Ubuntu Mono", "Monaco", monospace;
 // $code-font-weight: bold;
-$code-font-weight: normal;
+// $code-font-weight: normal;
 
 // We use these to style anchors
 // $anchor-text-decoration: none;
@@ -931,7 +925,7 @@ $list-style-position: inside;
 // These control the background color for the table and even rows
 // $table-bg: #fff;
 // $table-even-row-bg: #f9f9f9;
-$table-even-row-bg: lighten($green-light, 10%);
+$table-even-row-bg: lighten($footer-color, 10%);
 
 // These control the table cell border style
 // $table-border-style: solid;

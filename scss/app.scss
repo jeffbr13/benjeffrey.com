@@ -54,7 +54,7 @@ nav {
     padding-bottom: 0.85em;
 
     background-color: $primary-color;
-    border-bottom: solid $yellow 1em;
+    border-bottom: solid $secondary-color 1em;
 
     font-family: $header-font-family;
     font-size: emCalc(37px);
@@ -63,9 +63,7 @@ nav {
         @include grid-column($columns:12, $last-column:true, $center:true);
 
         ul {
-            margin: 1em;
-            line-height: $topbar-height;
-
+            color: $body-bg;
             list-style-type: none;
 
             .home {
@@ -87,10 +85,10 @@ nav {
             }
 
             a {
-                color: $light;
+                color: $body-bg;
                 &:hover,
                 &:focus {
-                    color: darken($light, 2%);
+                    color: darken($body-bg, 6%);
                 }
             }
         }
@@ -123,14 +121,21 @@ header {
     }
 }
 
+
 // Sticky footer!
 @import "compass/layout";
 @include sticky-footer(8em, ".wrapper", ".push", "footer");
 footer {
     padding-top: 2em;
-    background-color: $green-light;
+    background-color: $footer-color;
     text-align: center;
+}
+.push {
+    margin-bottom: 3em;
+}
 
-    p {
-    }
+
+// smaller text in CODE elements, as monospace fonts have taller x-heights:
+code {
+    font-size: 90%;
 }
