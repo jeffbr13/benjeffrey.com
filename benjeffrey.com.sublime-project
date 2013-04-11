@@ -1,0 +1,9 @@
+{
+	"folders":
+	[
+		{
+			"path": "/home/jeffbr/code/benjeffrey.com",
+            "folder_exclude_patterns": ["_cache", ".sass-cache", "_site", "css"]
+		}
+	]
+}
