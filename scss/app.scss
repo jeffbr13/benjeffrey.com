@@ -63,8 +63,8 @@ nav {
         @include grid-column($columns:12, $last-column:true, $center:true);
 
         ul {
-            color: $body-bg;
             list-style-type: none;
+            color: $body-bg;
 
             .home {
                 font-size: $topbar-title-font-size;
@@ -127,8 +127,10 @@ header {
 @include sticky-footer(8em, ".wrapper", ".push", "footer");
 footer {
     padding-top: 2em;
-    background-color: $footer-color;
     text-align: center;
+
+    background-color: $footer-color;
+    color: $secondary-color;
 }
 .push {
     margin-bottom: 3em;
