@@ -51,8 +51,6 @@
 nav {
     @include grid-row;
 
-    padding-bottom: 0.85em;
-
     background-color: $primary-color;
     border-bottom: solid $secondary-color 1em;
 
@@ -63,8 +61,10 @@ nav {
         @include grid-column($columns:12, $last-column:true, $center:true);
 
         ul {
+            margin: 0.85em;
             list-style-type: none;
             color: $body-bg;
+            height: $topbar-height - 8px;
 
             .home {
                 font-size: $topbar-title-font-size;
