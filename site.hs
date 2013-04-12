@@ -29,6 +29,7 @@ main = hakyll $ do
         --route   $ setExtension "html"
         route   $ setExtension ""
         compile $ pandocCompiler
+            >>= loadAndApplyTemplate "templates/generic.html" defaultContext
             >>= loadAndApplyTemplate "templates/default.html" defaultContext
             >>= relativizeUrls
 
@@ -63,6 +64,7 @@ main = hakyll $ do
 
             getResourceBody
                 >>= applyAsTemplate indexCtx
+                >>= loadAndApplyTemplate "templates/generic.html" postCtx
                 >>= loadAndApplyTemplate "templates/default.html" postCtx
                 >>= relativizeUrls
 

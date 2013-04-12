@@ -113,11 +113,16 @@ header {
 }
 
 
-// Main body content
 .content {
+    // generic body content
     @include grid-row;
-    .column {
+    .generic {
         @include grid-column($columns:7, $last-column:true, $center:true);
+    }
+
+    // blog content
+    .blog-post {
+        @include grid-column($columns:9, $last-column:true, $center:true);
     }
 }
 
