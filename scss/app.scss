@@ -55,16 +55,16 @@ nav {
     border-bottom: solid $secondary-color 1em;
 
     font-family: $header-font-family;
-    font-size: emCalc(37px);
+    font-size: emCalc(32px);
 
     .navigation-list {
         @include grid-column($columns:12, $last-column:true, $center:true);
 
         ul {
-            margin: 0.85em;
+            margin: 1em;
             list-style-type: none;
             color: $body-bg;
-            height: $topbar-height - 8px;
+            height: $topbar-height;
 
             .home {
                 font-size: $topbar-title-font-size;
