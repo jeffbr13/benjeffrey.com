@@ -116,7 +116,7 @@ header {
 .content {
     // generic body content
     @include grid-row;
-    .generic {
+    .generic-content {
         @include grid-column($columns:12, $last-column:true, $center:true);
         max-width: 35em;
     }
