@@ -9,8 +9,14 @@
     "build_systems":
     [
         {
-            "name": "Hakyll static site and SCSS",
-            "cmd": ["compass", "compile", "&&", "./site", "build"],
+            "name": "SCSS",
+            "cmd": ["compass", "compile"],
+            "working_dir": "$project_path",
+            "selector": "source.scss"
+        },
+        {
+            "name": "static site",
+            "cmd": ["./site", "build"],
             "working_dir": "$project_path"
         },
         {
