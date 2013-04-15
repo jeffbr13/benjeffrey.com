@@ -5,5 +5,19 @@
 			"path": "/home/jeffbr/code/benjeffrey.com",
             "folder_exclude_patterns": ["_cache", ".sass-cache", "_site", "css"]
 		}
-	]
+	],
+    "build_systems":
+    [
+        {
+            "name": "Hakyll static site and SCSS",
+            "cmd": ["compass", "compile", "&&", "./site", "build"],
+            "working_dir": "$project_path"
+        },
+        {
+            "name": "Hakyll executable",
+            "cmd": ["ghc", "--make", "site.hs"],
+            "file_regex": "^(...*?):([0-9]*):?([0-9]*)",
+            "working_dir": "$project_path"
+        }
+    ]
 }
