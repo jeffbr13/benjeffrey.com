@@ -117,12 +117,14 @@ header {
     // generic body content
     @include grid-row;
     .generic {
-        @include grid-column($columns:7, $last-column:true, $center:true);
+        @include grid-column($columns:12, $last-column:true, $center:true);
+        max-width: 35em;
     }
 
     // blog content
     .blog-post {
-        @include grid-column($columns:9, $last-column:true, $center:true);
+        @include grid-column($columns:12, $last-column:true, $center:true);
+        max-width: 35em;
     }
 }
 
