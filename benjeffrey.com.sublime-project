@@ -1,29 +1,27 @@
 {
-	"folders":
-	[
-		{
-			"path": "/home/jeffbr/code/benjeffrey.com",
-            "folder_exclude_patterns": ["_cache", ".sass-cache", "_site", "css"]
-		}
-	],
-    "build_systems":
-    [
-        {
-            "name": "SCSS",
-            "cmd": ["compass", "compile"],
-            "working_dir": "$project_path",
-            "selector": "source.scss"
-        },
-        {
-            "name": "static site",
-            "cmd": ["./site", "build"],
-            "working_dir": "$project_path"
-        },
-        {
-            "name": "Hakyll executable",
-            "cmd": ["ghc", "--make", "site.hs"],
-            "file_regex": "^(...*?):([0-9]*):?([0-9]*)",
-            "working_dir": "$project_path"
-        }
-    ]
+ "folders": [
+  {
+   "folder_exclude_patterns": [
+    "_cache",
+    ".sass-cache",
+    "css"
+   ],
+   "path": "/home/jeffbr/code/benjeffrey.com",
+   "file_exclude_patterns": [
+    "benjeffrey.com.sublime-workspace",
+    "site",
+    "site.hi"
+   ]
+  }
+ ],
+ "build_systems": [
+  {
+   "working_dir": "$project_path",
+   "cmd": [
+    "./site",
+    "build"
+   ],
+   "name": "Hakyll static site"
+  }
+ ]
 }

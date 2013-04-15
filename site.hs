@@ -11,9 +11,15 @@ main = hakyll $ do
         route   idRoute
         compile copyFileCompiler
 
-    match "css/*" $ do
-        route   idRoute
-        compile compressCssCompiler
+    match "scss/app.scss" $do
+        route   $ gsubRoute "scss/" (const "css/") `composeRoutes` setExtension "css"
+        compile $ getResourceString >>=
+            withItemBody (unixFilter "sass" ["-s", "--scss", "--compass"]) >>=
+                return -- . fmap compressCss
+
+    --match "css/*" $ do
+    --    route   idRoute
+    --    compile compressCssCompiler
 
     match "js/*/*" $ do
         route   idRoute
