@@ -61,7 +61,8 @@ nav {
         @include grid-column($columns:12, $last-column:true, $center:true);
 
         ul {
-            margin: 1em;
+            margin-top: 0.75em;
+            margin-bottom: 0.75em;
             list-style-type: none;
             color: $body-bg;
             height: $topbar-height;
