@@ -1,11 +1,11 @@
-# Git post-commit hook for the server admins
-# automatically pushes Hakyll-generated site up to the server using scp
+# Compile and push Hakyll-generated site up to the server using scp
+## set as a Git hook for more awesomeness
 
 echo "********************************************************************************"
 echo "Beginning post-commit site upload."
 ## recompile the binary, just in case
 echo "\nRecompiling site.hs (GHC and Hakyll must be installed)..."
-ghc --make site.hs
+ghc --make hakyll.hs
 echo "\nRebuilding site..."
 ./site rebuild
 echo "\nUploading site..."
