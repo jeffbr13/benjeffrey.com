@@ -9,8 +9,8 @@
    "path": "/home/jeffbr/code/benjeffrey.com",
    "file_exclude_patterns": [
     "benjeffrey.com.sublime-workspace",
-    "site",
-    "site.hi"
+    "hakyll",
+    "*.hi"
    ]
   }
  ],
@@ -18,7 +18,7 @@
   {
    "working_dir": "$project_path",
    "cmd": [
-    "./site",
+    "./hakyll",
     "build"
    ],
    "name": "Hakyll static site"

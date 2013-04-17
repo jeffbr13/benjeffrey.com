@@ -1,16 +1,26 @@
+#!/bin/sh
 # Compile and push Hakyll-generated site up to the server using scp
 ## set as a Git hook for more awesomeness
 
-echo "********************************************************************************"
-echo "Beginning post-commit site upload."
-## recompile the binary, just in case
-echo "\nRecompiling site.hs (GHC and Hakyll must be installed)..."
-ghc --make hakyll.hs
+DOMAIN="benjeffrey.com"
+HAKYLL_SCRIPT="hakyll.hs"
+HAKYLL_EXEC="hakyll"
+WEBSERVER="parsley"
+
+# echo "********************************************************************************"
+echo "\nBeginning post-commit site upload."
+
+# recompile the binary, just in case
+echo "\nRecompiling ${HAKYLL_SCRIPT} (GHC and Hakyll must be installed)..."
+ghc --make ${COMPILE_EXECUTABLE}
+
 echo "\nRebuilding site..."
-./site rebuild
-echo "\nUploading site..."
-scp -rC ./_site/* parsley:/var/www/benjeffrey.com/
+./${HAKYLL_EXEC} rebuild
+
+echo "\nUploading site to ${WEBSERVER}..."
+scp -rC ./_site/* ${WEBSERVER}:/var/www/${DOMAIN}/
+
 echo "\nUploading Nginx configuration..."
-scp -C ./deployment/site.nginx parsley:/etc/nginx/sites_enabled/benjeffrey.com
-echo "\nSite upload complete! Check it out at http://benjeffrey.com"
-echo "********************************************************************************"
+scp -C ./deployment/site.nginx ${WEBSERVER}:/etc/nginx/sites_enabled/${DOMAIN}
+echo "\nSite upload complete! Check it out at http://${DOMAIN}\n"
+# echo "********************************************************************************"
