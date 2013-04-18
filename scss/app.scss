@@ -92,13 +92,26 @@
 @import "compass/layout/sticky-footer";
 @include sticky-footer(8em, ".wrapper", ".push", "footer");
 
+// footer stuff
+footer {
+    padding-top: 2em;
+    background-color: $primary-color;
 
-// colours!
+    p {
+        text-align: center;
+        color: $body-bg;
+    }
+}
+
+// backgrounds
 body {
     border-top: $side-nav-divider-color $side-nav-divider-style 1em;
-    background-image: url("../images/xv.png");
+    // background-image: url("../images/xv.png");
     background-image: url("../images/whitediamond.png");
     // background-image: url("../images/diamond_upholstery.png");
+}
+.content {
+    background-color: rgba(255,255,255, 0.5);
 }
 
 // sidebar
@@ -132,22 +145,6 @@ nav {
     &:hover {
         opacity: 1.0;
     }
-
-}
-
-
-.content {
-    background-color: rgba(255,255,255,0.6);
-}
-
-footer {
-    padding-top: 2em;
-    background-color: $primary-color;
-
-    p {
-        text-align: center;
-        color: $body-bg;
-    }
 }
 
 // code and syntax highlighting
@@ -158,3 +155,10 @@ pre {
     background-color: $quaternary-color;
 }
 
+// blog-post info
+.blog-post {
+
+    .info {
+        @include panel($body-bg);
+    }
+}
