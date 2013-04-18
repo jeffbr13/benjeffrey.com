@@ -5,8 +5,8 @@ description: Where Ben Jeffrey has been, and what he's done.
 
 Hey there. I'm Ben.
 
-I'm currently studying for my Master of Informatics degree at the
-University of Edinburgh.
+I'm currently studying for my Master of Informatics degree at
+[the University of Edinburgh][uni].
 
 I'm a hands-on learner and a methodical worker. I rather enjoy operating
 in high-pressure situations and tight turnaround times, with skilled and
@@ -27,21 +27,21 @@ friendly people.
 Skills
 ------
 
-### Web Development
+### Web-Development:
 
-* web applications with Flask & Python
-* web design with CSS and SCSS
-* interactive pages with JavaScript
-* static blogs and websites using Hakyll
-* running (but not custom development for) Wordpress-based sites
+* developing web applications using [Flask][] & Python (2)
+* styling webpages with CSS and [Sass][]
+* building interactive webpages with JavaScript
+* customizing static blogs and websites built on [Hakyll][]
+* running Wordpress-based sites
 
-### Server Administration
+### Server-Administration:
 
 * Git/SSH-based development/deployment workflow
-* Saltstack automatic server configuration
-* Apache & Nginx for running static websites
+* [Saltstack][] automatic server configuration
+* Apache & Nginx for hosting static websites
 * basic CentOS & Ubuntu Server configuration
-* I run Arch Linux on my laptop from time to time!
+* I even run Arch Linux from time-to-time!
 
 ### Other Languages
 
@@ -72,20 +72,24 @@ office-work.
 ### Junior Javascript Developer, [Accendo Design](http://www.accendodesign.com/) (July-August 2011)
 
 Three weeks of work experience, given the Rhino book to learn Javascript
-on the job, and building webforms for a real-estate management startup.
-Also learning the ins-and-outs of all sorts of strange and exotic teas!
+on the job, and building webform validation for a real-estate management
+startup. I also learned the ins-and-outs of all sorts of strange and
+exotic teas!
 
 ### Waiter, [Fratello's Restaurant Scotch Corner](http://www.fratellosscotchcorner.co.uk/) (Summer 2012)
 
-Bussing tables, with a couple of nights on the hotel banqueting team, and
-a few helping out at the Columbus Bar.
+I spent the majority of my time as a waiter bussing tables, along with
+a couple of nights on the hotel banqueting team for important occasions,
+as well as a few late nights helping out at the Columbus Bar.
+
+### Telephone Interviewer, [Ipsos Mori Scotland](http://www.ipsos-mori.com/offices/scotland.aspx) (Winter 2012-2013)
 
 
-University Career, University of Edinburgh (2012-2017)
-------------------------------------------------------
+University of Edinburgh (2012-2017)
+-----------------------------------
 
-Currently studying for a Master of Informatics (MInf.) degree at the University
-of Edinburgh.
+Currently studying to be a [Master of Informatics (MInf)][minf]
+at [the University of Edinburgh](http://www.ed.ac.uk).
 
 ### Hackathons
 
@@ -98,8 +102,8 @@ I've been busy attending
 * NHS Hack Scotland
 
 
-Secondary-school Career, Barnard Castle School (2006-2012)
-----------------------------------------------------------
+Barnard Castle School (2006-2012)
+---------------------------------
 
 * A in Mathematics (A2 level)
 * A in Latin (A2 level)
@@ -109,7 +113,7 @@ Secondary-school Career, Barnard Castle School (2006-2012)
 ### Newsletter Designer & Senior Sound Engineer, Barnard Castle School (2011-2012)
 
 I did layout for 15 issues of the school's weekly newsletter, using a custom
-design, and the [Scribus NG](http://scribus.net/canvas/Scribus)
+design and the [Scribus NG](http://scribus.net/canvas/Scribus)
 desktop-publishing software.
 
 I also contributed pictures to school publications and brochures
@@ -118,7 +122,7 @@ from time-to-time, and photography is still an [occasional hobby of mine][flickr
 I was on the school's Tech Crew, issued with a polo-shirt and a few
 instruction manuals, and given control of the sound-board for all major
 productions during my last year in the Sixth Form. I also set up sound
-for a friend's band a couple of times, and got paid in pints. That was
+for a friend's band a couple of times, and got paid in pints, which was
 pretty fun, too!
 
 
@@ -150,5 +154,12 @@ with a yearbook, handed to them on results day.
 
 
 <!-- links -->
+
+[uni]: #university-of-edinburgh-2012-2017
+[minf]: http://www.inf.ed.ac.uk/student-services/teaching-organisation/taught-course-information/degree-programmes/master-of-informatics
+[Flask]: http://flask.pocoo.org/
+[Sass]: http://sass-lang.com/
+[Hakyll]: http://jaspervdj.be/hakyll/
+[Saltstack]: http://saltstack.com/
 [flickr]: http://www.flickr.com/photos/jeffbr13/
 [INF-YT]: http://inf-yt.org.uk/
