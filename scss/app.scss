@@ -68,13 +68,12 @@ code {
 }
 nav {
     @include grid-column(2);
+    margin-top: 5em;
 
     @media #{$portrait} {
         @include grid-row;
         @include grid-column(6,$push:3);
     }
-
-    margin-top: 5em;
 }
 .logo-img {
     @media #{$portrait} {
