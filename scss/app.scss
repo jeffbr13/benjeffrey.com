@@ -74,11 +74,23 @@
 
     nav {
         @include grid-column(2);
+
+        @media #{$portrait} {
+            @include grid-row;
+            @include grid-column(6,$push:3);
+        }
+
         margin-top: 1em;
     }
 
     .content {
         @include grid-column($columns:9, $last-column:true, $push:1);
+
+        @media #{$portrait} {
+            @include grid-row;
+            @include grid-column(10, $last-column:true);
+        }
+
         margin-top: 2em;
         margin-bottom: 2em;
     }
@@ -119,6 +131,13 @@ nav {
     .navigation-list {
         margin-top: 2em;
     }
+
+    @media #{$portrait} {
+        .face {
+            display: none;
+        }
+    }
+
 
     ul {
         @include side-nav;
