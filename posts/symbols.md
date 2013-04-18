@@ -1,5 +1,5 @@
 -----
-title: Vaguely Useful Unicode Symbols
+title: Symbols
 description: A list of useful/pretty/interesting Unicode symbols.
 date: 2013-04-16
 -----
@@ -45,6 +45,7 @@ symbol  meaning
 ‰       per mille sign
 ‱       per ten thousand sign (1 basis point (bp) = 1 permyriad = one one-hundredth percent)
 ฿       bitcoin
+£       pound sterling
 
 
 mathematics
