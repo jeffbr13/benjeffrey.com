@@ -5,8 +5,13 @@ import           Hakyll
 
 
 --------------------------------------------------------------------------------
+config :: Configuration
+config = defaultConfiguration
+        {   deployCommand = "scp -rC ./_site/* parsley:/var/www/benjeffrey.com/ && scp -C ./nginx parsley:/etc/nginx/sites_enabled/benjeffrey.com"}
+
+--------------------------------------------------------------------------------
 main :: IO ()
-main = hakyll $ do
+main = hakyllWith config $ do
 
     match "images/favicon.ico" $ do
         route   (constRoute "favicon.ico")
