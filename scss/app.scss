@@ -47,23 +47,20 @@
 
 
 // custom typography
-.content {
+h1 {
+    // margin-top: 0.75em;
+    line-height: 1;
+    font-weight: bold;
+    text-align: center;
+}
 
-    h1 {
-        // margin-top: 0.75em;
-        line-height: 1;
-        font-weight: bold;
-        text-align: center;
-    }
+p {
+    text-align: justify;
+    max-width: 38em;
+}
 
-    p {
-        text-align: justify;
-        max-width: 38em;
-    }
-
-    code {
-        font-size: 90%;
-    }
+code {
+    font-size: 90%;
 }
 
 
@@ -71,43 +68,44 @@
 // Layout
 .wrapper {
     @include grid-row;
+}
 
-    nav {
-        @include grid-column(2);
+nav {
+    @include grid-column(2);
 
-        @media #{$portrait} {
-            @include grid-row;
-            @include grid-column(6,$push:3);
-        }
+    @media #{$portrait} {
+        @include grid-row;
+        @include grid-column(6,$push:3);
+    }
 
+    margin-top: 1em;
+}
+
+.logo-img {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    @media #{$portrait} {
         margin-top: 1em;
+        margin-bottom: 0em;
     }
+}
 
-    .logo img {
-        margin-top: 2em;
-        margin-bottom: 2em;
-        @media #{$portrait} {
-            margin-top: 1em;
-            margin-bottom: 0em;
-        }
-    }
+.content {
+    @include grid-column($columns:9, $last-column:true, $push:1);
 
-    .content {
-        @include grid-column($columns:9, $last-column:true, $push:1);
+    margin-top: 2em;
+    margin-bottom: 2em;
 
-        margin-top: 2em;
-        margin-bottom: 2em;
+    @media #{$portrait} {
+        @include grid-row;
+        @include grid-column(10, $last-column:true);
 
-        @media #{$portrait} {
-            @include grid-row;
-            @include grid-column(10, $last-column:true);
-
-            h1 {
-                margin-top: 0em;
-            }
+        h1 {
+            margin-top: 0em;
         }
     }
 }
+
 @import "compass/layout/sticky-footer";
 @include sticky-footer(8em, ".wrapper", ".push", "footer");
 
@@ -118,6 +116,7 @@ footer {
 
     p {
         text-align: center;
+        max-width: none;
         color: $body-bg;
     }
 }
@@ -139,34 +138,31 @@ body {
 }
 
 // sidebar
+.navigation-list {
+    margin-top: 2em;
+}
+
+@media #{$portrait} {
+    .face {
+        display: none;
+    }
+}
+.logo-img {
+    width: 100%;
+}
 nav {
-    .navigation-list {
-        margin-top: 2em;
-    }
-
-    @media #{$portrait} {
-        .face {
-            display: none;
-        }
-    }
-
-
     ul {
         @include side-nav;
         li {
             text-align: center;
         }
     }
-
-    .logo img {
-        width: 100%;
-    }
 }
 
 // sidebar animation
 @import "compass/css3/transition";
 .logo, .navigation-list {
-    opacity: 0.5;
+    opacity: 0.6;
 
     @include transition-property(opacity);
     @include transition-duration(0.5s);
@@ -188,7 +184,7 @@ pre {
 // blog-post info
 .blog-post {
 
-    .info {
+    .blog-info {
         @include panel($body-bg);
     }
 }
