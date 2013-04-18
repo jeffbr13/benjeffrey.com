@@ -174,8 +174,12 @@ body {
 pre {
     margin-bottom: 1em;
     padding: 1em;
-    background-color: $quaternary-color;
 
+    overflow: auto;
+    // overflow-x: scroll;
+    // white-space: pre-wrap;
+
+    background-color: $quaternary-color;
 }
 
 // blog-post info panel -------------------------------------------------
