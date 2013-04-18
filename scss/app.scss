@@ -168,6 +168,8 @@ nav {
     @include transition-duration(0.5s);
     @include transition-timing-function(ease);
 
+    &:active,
+    &:focus,
     &:hover {
         opacity: 1.0;
     }
@@ -179,6 +181,7 @@ pre {
     margin-bottom: 1em;
     padding: 1em;
     background-color: $quaternary-color;
+
 }
 
 // blog-post info
