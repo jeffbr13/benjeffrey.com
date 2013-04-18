@@ -1,6 +1,6 @@
 ---
 title: Building a static blog with Hakyll & Zurb Foundation
-description: How I rebuilt my website using Hakyll (the static site generator written in Haskell), and Zurb's Foundation framework.
+description: Rebuilding my website using the Hakyll static site generator, and Zurb's Foundation framework.
 tags: web-development
 date: 2013-04-06
 ---
@@ -10,51 +10,56 @@ date: 2013-04-06
 Prelude
 -------
 
-A few weeks ago, I found that [benjeffrey.com](http://benjeffrey.com) was
+A few weeks ago, I found that [benjeffrey.com][] was
 finally back up for sale, so I snatched it up before another registrar
 decided to sit on it again.
 
 But (I mused...) if I was going to move to this fancy new domain name
 then maybe I ought to consider giving my old hand-written HTML a bit of
 spit-and-polish? After all, it was the first webpage I'd ever really put
-online, back when I was paying £10/annum for [a domain name and shared
-hosting][fasthostingdirect]!) and now my web presence was looking
+online (back when I was paying £10/annum for [a domain name and shared
+hosting][fasthostingdirect]) and now my web presence was looking
 rather... meh. Certainly not the standard you'd expect from a student of
 <abbr title="Computer Science">Informatics</abbr>!
+
+So my new website for [benjeffrey.com][] is built and deployed (as of
+2013-04) through a combination of:
+
+* Hakyll
+* Foundation 4
+* Compass & Sass
+* Nginx
+* Google Web Fonts
+* Git
+* SSH
+
+
+Static Site Generation with Hakyll
+----------------------------------
 
 I quite liked the fact that my old site could run from
 [any old webserver](/posts/nginx), so I decided to find a trendy
 static-site generator to run everything.
 
-Unfortunately the [most popular option][Jekyll] is written in Ruby, a
-language that I'm not too keen on, personally. And the set-up is hellish
-if you don't know what you're doing (I don't). I ended up too exhausted
-getting the basic [Jekyll][]/[Octopress][] site running on [GitHub
-Pages][] to then learn how to configure or customize the damn thing.
+Unfortunately [Jekyll][], the most popular static-site generator, is
+written in Ruby, a language that I'm not too keen on. And the Ruby
+toolchain's set-up is hellish if you don't know what you're doing -- and
+I don't. I had too little patience left after getting the basic
+[Jekyll][]/[Octopress][] site running on [GitHub Pages][] to then learn
+how to configure or customize the damned thing!
 
-However, I came across a cool little project by the name of [Hakyll][].
-Shamelessly riffing off Jekyll's fame, Hakyll is instead written in
-Haskell! Having spent last semester getting to grips with this language,
-Hakyll seemed like a pretty good choice, if only as a learning
-experience!
-
-On the style side, I wanted the benefits of using a large framework, but thought
-I'd experiment (i.e. *not* use [Bootstrap][]) for once.
-[Foundation 4][Foundation] had just been released, and I found out that it used
-Sass, which I thought would be fun.
-
-So I settled on [a colour-scheme on ColourLovers][intellectual owl],
-and [a font from Google Web Fonts][Vollkorn], and got to work!
+Eventually though, I came across a cool little project by the name of
+[Hakyll][]. Shamelessly riffing off Jekyll's fame, Hakyll performs the same
+function, only it's written in Haskell! Having spent last semester getting
+to grips with this language, Hakyll seemed like a pretty good choice, if
+only as a learning experience.
 
 
-Hakyll static site generator
-----------------------------
-
-### Install
+### Installing Hakyll
 
 The [Hakyll tutorials][] are plenty to get you started, and
 the [Hakyll Haddock documentation][Hakyll reference] is invaluable if you
-want to *really* customize your site.
+want to *really* customize it.
 
 **Requirements:** GHC and [Cabal][], Haskell's package-management system.
 
@@ -79,21 +84,93 @@ sensible-browser "http://localhost:8000"
 The `hakyll.hs`/`site.hs` source file compiles an executable which
 is itself the static site generator.
 
+### Custom Hakyll rules
+
+
+
+
+Site Design
+-----------
+
+On the style side, I wanted the benefits of using a large framework, but
+thought I'd experiment a bit -- i.e. *not* use [Bootstrap][]. A new
+version of the [Zurb Foundation framework][Foundation] had just been
+released, and since it uses Sass, I thought it might be fun to try out.
+At least I wouldn't end up with too many presentational classes stuck in
+my HTML.
+
+Finally, I settled on [a colour-scheme from ColourLovers][intellectual owl],
+and [a font from Google Web Fonts][Vollkorn], and got to work!
+
+### Layout
+
+After playing about with a single-column layout for a while, I just
+couldn't get happy with the vertical space that a navigation flagstaff
+took up before you even got to the oversized page header.
+
+These days, when many laptops are *still* shipping with displays only
+768px tall, you can't afford the vertical space needed for a true
+single-column layout.
+
+I had an inkling that I might repeat what I did on the
+[INF-YT site][INF-YT], where the page title took up the entire
+left-hand-side of the page.
+However, I really liked [Dayle Rees's site][daylerees] (after I came
+across it while looking for his excellent [Sublime Text colour
+schemes][ST colour schemes]). And so you can probably see that I pretty-
+much ripped off his whole logo/face/nav sidebar-thing here! Great artists
+steal, and all that jazz...
+
+
+### Colour-Scheme
+
+
+### Typography
+
+* font-combinator
+* http://hellohappy.org/beautiful-web-type/
+* http://bueltge.de/free-web-font-combinations/
+
+
+### Finishing Touches
+
+* background
+* logo
+* getting `pre` to work properly
+* `humans.txt` -- this really comes along with Foundation, but it's good
+    to update it to what you actually used
+*
+
+
+Summary
+-------
+
+A tentative project like this only really comes together at the end,
+when putting on all the finishing "touches" to it. These are what make
+the
+
+
 
 
 
 
 <!-- footnotes -->
+
 [^hakyll-init]: If you can't run the `hakyll-init` command, you may
     need to add the local Cabal binary folder to your shell's `$PATH`
     variable with the following lines in your shell config:
 
     ```bash
-    ## Cabal Haskell package management scripts
+    ### ~/.profile
+
+    # Cabal executables
     PATH=$PATH:$HOME/.cabal/bin
     ```
 
+
 <!-- links -->
+
+[benjeffrey.com]: http://benjeffrey.com
 [fasthostingdirect]: http://www.fasthostingdirect.co.uk/
 [Jekyll]: http://jekyllrb.com/
 [Octopress]: http://octopress.org/
@@ -107,3 +184,6 @@ is itself the static site generator.
 [Vollkorn]: http://www.google.com/fonts/specimen/Vollkorn
 [Cabal]: http://www.haskell.org/cabal/
 [installed Hakyll]: http://jaspervdj.be/hakyll/tutorials/01-installation.html
+[INF-YT]: http://inf-yt.org.uk/
+[daylerees]: http://daylerees.com/
+[ST colour schemes]: https://github.com/daylerees/colour-schemes
