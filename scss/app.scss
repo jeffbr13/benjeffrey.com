@@ -44,108 +44,113 @@
 // @import "foundation/components/tooltips";
 // @import "foundation/components/dropdown";
 
-// Typefaces!
-@import url(http://fonts.googleapis.com/css?family=Crete+Round:400,400italic);
 
-// Navigation row
-nav {
-    @include grid-row;
 
-    background-color: $primary-color;
-    border-bottom: solid $secondary-color 1em;
+// custom typography
+.content {
 
-    font-family: $header-font-family;
-    font-size: emCalc(32px);
+    h1 {
+        // margin-top: 0.75em;
+        line-height: 1;
+        font-weight: bold;
+        text-align: center;
+    }
 
-    .navigation-list {
-        @include grid-column($columns:12, $last-column:true, $center:true);
-
-        ul {
-            margin-top: 0.75em;
-            margin-bottom: 0.75em;
-            list-style-type: none;
-            color: $body-bg;
-            height: $topbar-height;
-
-            .home {
-                font-size: $topbar-title-font-size;
-                font-weight: $topbar-title-weight;
-                display: block;
-            }
-
-            li {
-                float: $default-float;
-            }
-
-            .pages {
-                float: right;
-
-                li {
-                    margin-left: 1em;
-                }
-            }
-
-            a {
-                color: $body-bg;
-                &:hover,
-                &:focus {
-                    color: darken($body-bg, 6%);
-                }
-            }
-        }
+    p {
+        text-align: justify;
+        max-width: 38em;
     }
 }
 
-// Page title and header
-header {
+
+
+// Layout
+.wrapper {
     @include grid-row;
 
-    .page-title {
-        @include grid-column($columns:12, $last-column:true, $center:true);
+    nav {
+        @include grid-column(2);
+        margin-top: 1em;
+    }
 
-        h1 {
-            margin-top: 0.75em;
-            line-height: 1;
-            font-weight: bold;
+    .content {
+        @include grid-column($columns:9, $last-column:true, $push:1);
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+
+    .push {
+    }
+
+    footer {
+    }
+}
+@import "compass/layout/sticky-footer";
+@include sticky-footer(8em, ".wrapper", ".push", "footer");
+
+
+// colours!
+body {
+    border-top: $side-nav-divider-color $side-nav-divider-style 1em;
+    background-image: url("../images/xv.png");
+    background-image: url("../images/whitediamond.png");
+    // background-image: url("../images/diamond_upholstery.png");
+}
+
+// sidebar
+nav {
+    .navigation-list {
+        margin-top: 2em;
+    }
+
+    ul {
+        @include side-nav;
+        li {
             text-align: center;
         }
-
     }
+
+    .logo img {
+        width: 100%;
+        margin-bottom: 2em;
+    }
+}
+
+// sidebar animation
+@import "compass/css3/transition";
+.logo, .navigation-list {
+    opacity: 0.5;
+
+    @include transition-property(opacity);
+    @include transition-duration(0.5s);
+    @include transition-timing-function(ease);
+
+    &:hover {
+        opacity: 1.0;
+    }
+
 }
 
 
 .content {
-    // generic body content
-    @include grid-row;
-    .generic-content {
-        @include grid-column($columns:12, $last-column:true, $center:true);
-        max-width: 35em;
-    }
-
-    // blog content
-    .blog-post {
-        @include grid-column($columns:12, $last-column:true, $center:true);
-        max-width: 35em;
-    }
+    background-color: rgba(255,255,255,0.6);
 }
 
-
-// Sticky footer!
-@import "compass/layout";
-@include sticky-footer(8em, ".wrapper", ".push", "footer");
 footer {
     padding-top: 2em;
-    text-align: center;
+    background-color: $primary-color;
 
-    background-color: $footer-color;
-    color: $secondary-color;
-}
-.push {
-    margin-bottom: 3em;
+    p {
+        text-align: center;
+        color: $body-bg;
+    }
 }
 
-
-// smaller text in CODE elements, as monospace fonts have taller x-heights:
-code {
-    font-size: 90%;
+// code and syntax highlighting
+@import "syntax-highlighting";
+pre {
+    margin-bottom: 1em;
+    padding: 1em;
+    background-color: $quaternary-color;
 }
+

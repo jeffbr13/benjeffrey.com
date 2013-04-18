@@ -13,12 +13,15 @@
 
 // This is the default html and body font-size for the base em value.
 $em-base: 18px;
+$base-font-size: 18px;
+
+@import url(http://fonts.googleapis.com/css?family=Vollkorn:400italic,400,700);
 
 // We use these to control various global styles
 // $body-bg: #fff;
 // $body-font-color: #222;
 // $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-$body-font-family: "Droid Serif", Georgia, serif;
+$body-font-family: "Vollkorn", serif;
 // $body-font-weight: normal;
 // $body-font-style: normal;
 
@@ -33,9 +36,8 @@ $body-font-family: "Droid Serif", Georgia, serif;
 $primary-color: rgb(30,71,110);
 $secondary-color: rgb(140,28,60);
 $tertiary-color: rgb(154,134,121);
-$alert-color: $secondary-color;
-$body-bg: rgb(249,247,233);
-$footer-color: rgb(61,150,153);
+$quaternary-color: rgb(249,247,233);
+// $alert-color: $secondary-color;
 // We use these as default colors throughout
 // $primary-color: #2ba6cb;
 // $secondary-color: #e9e9e9;
@@ -95,14 +97,16 @@ $footer-color: rgb(61,150,153);
 
 // We use these to control header font styles
 // $header-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-$header-font-family: "Crete Round", serif;
+$header-font-family: "Vollkorn", serif;
 // $header-font-weight: bold;
-$header-font-weight: normal;
+// $header-font-weight: normal;
 // $header-font-style: normal;
 // $header-font-color: #222;
 // $header-line-height: 1.4;
 // $header-top-margin: .2em;
+$header-top-margin: .35em;
 // $header-bottom-margin: .5em;
+$header-bottom-margin: 0.75em;
 // $header-text-rendering: optimizeLegibility;
 
 // We use these to control header font sizes
@@ -139,7 +143,7 @@ $paragraph-line-height: 1.41;
 
 // We use these to style <code> tags
 // $code-color: darken($alert-color, 10%);
-$code-color: $alert-color;
+$code-color: darken($tertiary-color, 20%);
 // $code-font-family: Consolas, 'Liberation Mono', Courier, monospace;
 // $code-font-weight: bold;
 // $code-font-weight: normal;
@@ -147,7 +151,8 @@ $code-color: $alert-color;
 // We use these to style anchors
 // $anchor-text-decoration: none;
 // $anchor-font-color: $primary-color;
-$anchor-font-color-hover: lighten($primary-color, 10%);
+$anchor-font-color: lighten($primary-color, 25%);
+$anchor-font-color-hover: lighten($primary-color, 35%);
 
 // We use these to style the <hr> element
 // $hr-border-width: 1px;
@@ -859,6 +864,7 @@ $list-style-position: inside;
 // $side-nav-divider-size: 1px;
 // $side-nav-divider-style: solid;
 // $side-nav-divider-color: darken(#fff, 10%);
+$side-nav-divider-color: $secondary-color;
 
 //
 // Sub Nav Variables
@@ -927,7 +933,6 @@ $list-style-position: inside;
 // These control the background color for the table and even rows
 // $table-bg: #fff;
 // $table-even-row-bg: #f9f9f9;
-$table-even-row-bg: lighten($footer-color, 10%);
 
 // These control the table cell border style
 // $table-border-style: solid;
