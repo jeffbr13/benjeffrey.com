@@ -178,9 +178,10 @@ pre {
 }
 
 // blog-post info panel -------------------------------------------------
-.blog-post {
+.info {
+    @include panel(transparentize($body-bg, 0.5));
 
-    .blog-info {
-        @include panel($body-bg);
+    p {
+        max-width: none;
     }
 }
