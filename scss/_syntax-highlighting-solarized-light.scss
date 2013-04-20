@@ -1,0 +1,34 @@
+@import "syntax-highlighting";
+
+pre.sourceCode {
+    background-color: #FDF6E3
+}
+
+// KeyWordTok
+pre.sourceCode span.kw { color: #268BD2; }
+// DataTypeTok
+pre.sourceCode span.dt { color: #268BD2; }
+
+$number: #D33682;
+// DecValTok (decimal value)
+pre.sourceCode span.dv { color: $number; }
+// BaseNTok
+pre.sourceCode span.bn { color: $number; }
+// FloatTok
+pre.sourceCode span.fl { color: $number; }
+// CharTok
+pre.sourceCode span.ch { color: #DC322F; }
+// StringTok
+pre.sourceCode span.st { color: #2AA198; }
+// CommentTok
+pre.sourceCode span.co { color: #93A1A1; }
+// OtherTok
+pre.sourceCode span.ot { color: #A57800; }
+// AlertTok
+pre.sourceCode span.al { color: #CB4B16; font-weight: bold; }
+// FunctionTok
+pre.sourceCode span.fu { color: #268BD2; }
+// RegionMarkerTok
+pre.sourceCode span.re { }
+// ErrorTok
+pre.sourceCode span.er { color: #D30102; font-weight: bold; }

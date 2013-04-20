@@ -167,7 +167,9 @@ body {
 
 
 // code and syntax highlighting -----------------------------------------
-@import "syntax-highlighting";
+@import "syntax-highlighting-solarized-light";
+// @import "syntax-highlighting-tron-legacy";
+
 pre {
     margin-bottom: 1em;
     padding: 1em;
@@ -175,8 +177,6 @@ pre {
     overflow: auto;
     // overflow-x: scroll;
     // white-space: pre-wrap;
-
-    background-color: $quaternary-color;
 }
 
 // blog-post info panel -------------------------------------------------
