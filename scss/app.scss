@@ -49,6 +49,9 @@
 // custom typography ----------------------------------------------------
 h1 {
 }
+h2 {
+    margin-top: 1em;
+}
 p {
     // max-width: 36em;
 }
@@ -84,6 +87,7 @@ nav {
     @media #{$portrait} {
         @include grid-row;
         @include grid-column(10, $last-column:true);
+        padding-top: 0em;
     }
 }
 .page-title {
