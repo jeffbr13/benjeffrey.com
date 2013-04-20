@@ -1,6 +1,6 @@
 ---
-title: Shell Commands
-description: A collection of handy Linux shell commands
+title: Useful Shell Commands
+description: A collection of useful Linux shell commands
 date: 2013-04-16
 ---
 

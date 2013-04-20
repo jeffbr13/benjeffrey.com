@@ -1,6 +1,6 @@
 -----
-title: Symbols
-description: A list of useful/pretty/interesting Unicode symbols.
+title: symbols
+description: A list of handy/pretty/interesting Unicode symbols.
 date: 2013-04-16
 -----
 
