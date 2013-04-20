@@ -80,8 +80,8 @@ nav {
 .content {
     @include grid-column($columns:9, $last-column:true, $push:1);
 
-    margin-top: 2em;
-    margin-bottom: 2em;
+    padding: 2em;
+    max-width: 34em;
 
     @media #{$portrait} {
         @include grid-row;

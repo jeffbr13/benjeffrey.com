@@ -4,7 +4,8 @@
    "folder_exclude_patterns": [
     "_cache",
     ".sass-cache",
-    "css"
+    "css",
+    "_site"
    ],
    "path": "/home/jeffbr/code/benjeffrey.com",
    "file_exclude_patterns": [
