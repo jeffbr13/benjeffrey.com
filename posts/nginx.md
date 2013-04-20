@@ -1,6 +1,6 @@
 -----
-title: Setting-up and using Nginx
-description: Some notes for installing/configuring Nginx
+title: Setting-up Nginx
+description: Basic Nginx configuration
 date: 2012-10-05
 -----
 

@@ -9,7 +9,7 @@ manage multiple virtual sessions, independently of how or where you're
 logged into a machine.
 
 
-Running a Screen Session
+Running a Screen session
 ------------------------
 
 To create a screen session, simply type `screen` and you will get a splash
@@ -39,11 +39,11 @@ screen -S [my session]
 ```
 
 
-Detaching from Sessions
------------------------
+Detaching from Screen sessions
+------------------------------
 
 You can detach yourself from a running `screen` session via the key-command
-`^a-d` (`ctrl-a-d`).
+<kbd>ctrl-a-d</kbd>.
 
 To reattach a session (the `-d` switch detaches the session from other
 terminals, if necessary):
