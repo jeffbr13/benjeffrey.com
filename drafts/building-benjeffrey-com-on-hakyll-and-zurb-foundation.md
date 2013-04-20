@@ -1,54 +1,40 @@
 ---
-title: Building a static blog with Hakyll & Zurb Foundation
-description: Rebuilding my website using the Hakyll static site generator, and Zurb's Foundation framework.
+title: Building benjeffrey.com on Hakyll & Zurb Foundation
+description: I now use Hakyll, a static-site generator, to build and deploy my website, while Zurb Foundation is behind the front-end.
 tags: web-development
 date: 2013-04-06
 ---
 
-**Note:** Sequence shortened and some steps removed.
+A few weeks ago I found [benjeffrey.com][] up for sale again,
+after many years of it being sat on by a registrar. So, with all due haste, I
+snatched it up, set up a redirect to [my old domain][benjeffrey.net], and
+began to consider all the wonderful things I wanted on my shiny-new dot-com,
+if I was going to rebuild my website from scratch.
 
-Prelude
--------
 
-A few weeks ago, I found that [benjeffrey.com][] was
-finally back up for sale, so I snatched it up before another registrar
-decided to sit on it again.
-
-But (I mused...) if I was going to move to this fancy new domain name
-then maybe I ought to consider giving my old hand-written HTML a bit of
-spit-and-polish? After all, it was the first webpage I'd ever really put
+After all, [benjeffrey.net][] was the first webpage I'd ever really put
 online (back when I was paying £10/annum for [a domain name and shared
 hosting][fasthostingdirect]) and now my web presence was looking
 rather... meh. Certainly not the standard you'd expect from a student of
 <abbr title="Computer Science">Informatics</abbr>!
 
-So my new website for [benjeffrey.com][] is built and deployed (as of
-2013-04) through a combination of:
 
-* Hakyll
-* Foundation 4
-* Compass & Sass
-* Nginx
-* Google Web Fonts
-* Git
-* SSH
+I settled on the following requirements for my new website:
+
+* A static-site generator would build all the content, because <del>that's what all
+    the cool kids are doing</del> I like being able to host my content from
+    any old webserver
+* I wanted to use Zurb's [Foundation][] framework for the front-end,
+    as I didn't want to litter my pages with Bootstrap classes.
+* A funky colour-scheme from [COLOURlovers][], rather than using the
+    framework defaults
+* Unintrusive but better-than-default font selection
 
 
 Static Site Generation with Hakyll
 ----------------------------------
 
-I quite liked the fact that my old site could run from
-[any old webserver](/posts/nginx), so I decided to find a trendy
-static-site generator to run everything.
-
-Unfortunately [Jekyll][], the most popular static-site generator, is
-written in Ruby, a language that I'm not too keen on. And the Ruby
-toolchain's set-up is hellish if you don't know what you're doing -- and
-I don't. I had too little patience left after getting the basic
-[Jekyll][]/[Octopress][] site running on [GitHub Pages][] to then learn
-how to configure or customize the damned thing!
-
-Eventually though, I came across a cool little project by the name of
+I came across a cool little project by the name of
 [Hakyll][]. Shamelessly riffing off Jekyll's fame, Hakyll performs the same
 function, only it's written in Haskell! Having spent last semester getting
 to grips with this language, Hakyll seemed like a pretty good choice, if
@@ -150,6 +136,19 @@ when putting on all the finishing "touches" to it. These are what make
 the
 
 
+tl;dr
+-----
+
+benjeffrey.com][] is built and deployed (as of
+2013-04) through a combination of:
+
+* Hakyll
+* Foundation 4
+* Compass & Sass
+* Nginx
+* Google Web Fonts
+* Git
+* SSH
 
 
 
@@ -171,6 +170,7 @@ the
 <!-- links -->
 
 [benjeffrey.com]: http://benjeffrey.com
+[benjeffrey.net]: http://benjeffrey.net
 [fasthostingdirect]: http://www.fasthostingdirect.co.uk/
 [Jekyll]: http://jekyllrb.com/
 [Octopress]: http://octopress.org/
@@ -187,3 +187,4 @@ the
 [INF-YT]: http://inf-yt.org.uk/
 [daylerees]: http://daylerees.com/
 [ST colour schemes]: https://github.com/daylerees/colour-schemes
+[COLOURlovers]: http://www.colourlovers.com/
