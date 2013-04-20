@@ -48,10 +48,9 @@
 
 // custom typography ----------------------------------------------------
 h1 {
-    line-height: 1.1;
 }
 p {
-    max-width: 30em;
+    // max-width: 36em;
 }
 code {
     font-size: 90%;
@@ -81,7 +80,6 @@ nav {
     @include grid-column($columns:9, $last-column:true, $push:1);
 
     padding: 2em;
-    max-width: 34em;
 
     @media #{$portrait} {
         @include grid-row;
@@ -115,7 +113,7 @@ body {
     // background-image: url("../images/diamond_upholstery.png");
 }
 .content {
-    background-color: rgba(255,255,255, 0.5);
+    background-color: rgba(255,255,255, 0.9);
     // more obvious background in single-column mode
     @media #{$portrait} {
         background-color: rgba(255,255,255, 0.3);
