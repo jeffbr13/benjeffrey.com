@@ -45,7 +45,7 @@ main = hakyllWith config $ do
             >>= loadAndApplyTemplate "templates/default.html" defaultContext
             >>= relativizeUrls
 
-    match "posts/*" $ do
+    match "post/*" $ do
         --route $ setExtension "html"
         route $ setExtension ""
         compile $ pandocCompiler
@@ -53,15 +53,14 @@ main = hakyllWith config $ do
             >>= loadAndApplyTemplate "templates/default.html" postCtx
             >>= relativizeUrls
 
-    create ["archive"] $ do
+    create ["posts"] $ do
         route idRoute
         compile $ do
             let archiveCtx =
                     field "posts" (\_ -> postList recentFirst)          `mappend`
                     constField "title" "Posts archive"                   `mappend`
-                    constField "description" "Previous posts on benjeffrey.com"  `mappend`
+                    constField "description" "Archive of posts on benjeffrey.com"  `mappend`
                     defaultContext
-
             makeItem ""
                 >>= loadAndApplyTemplate "templates/archive.html" archiveCtx
                 >>= loadAndApplyTemplate "templates/default.html" archiveCtx
@@ -93,7 +92,7 @@ postCtx =
 --------------------------------------------------------------------------------
 postList :: ([Item String] -> Compiler [Item String]) -> Compiler String
 postList sortFilter = do
-    posts   <- sortFilter =<< loadAll "posts/*"
+    posts   <- sortFilter =<< loadAll "post/*"
     itemTpl <- loadBody "templates/post-item.html"
     list    <- applyTemplateList itemTpl postCtx posts
     return list
