@@ -7,7 +7,7 @@ import           Hakyll
 --------------------------------------------------------------------------------
 config :: Configuration
 config = defaultConfiguration
-        {   deployCommand = "scp -rC ./_site/* parsley:/var/www/benjeffrey.com/ && scp -C ./nginx parsley:/etc/nginx/sites_enabled/benjeffrey.com"}
+        {   deployCommand = "rsync -avz -e ssh ./_site/ parsley:/var/www/benjeffrey.com/ && rsync -avz -e ssh ./nginx parsley:/etc/nginx/sites_enabled/benjeffrey.com"}
 
 --------------------------------------------------------------------------------
 main :: IO ()
