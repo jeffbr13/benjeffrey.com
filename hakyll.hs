@@ -13,6 +13,7 @@ config = defaultConfiguration
 main :: IO ()
 main = hakyllWith config $ do
 
+    -- copy site icon to `favicon.ico`
     match "images/favicon.ico" $ do
         route   (constRoute "favicon.ico")
         compile copyFileCompiler
@@ -23,22 +24,17 @@ main = hakyllWith config $ do
 
     match "scss/app.scss" $do
         route   $ gsubRoute "scss/" (const "css/") `composeRoutes` setExtension "css"
-        compile $ getResourceString >>=
-            withItemBody (unixFilter "sass" ["-s", "--scss", "--compass", "--style", "compressed"]) >>=
-                return . fmap compressCss
+        compile $ getResourceString
+            >>= withItemBody (unixFilter "sass" ["-s", "--scss", "--compass", "--style", "compressed"])
+            >>= return . fmap compressCss
 
-    --match "css/*" $ do
-    --    route   idRoute
-    --    compile compressCssCompiler
-
-    -- static files
+    -- copy humans.txt and robots.txt to web root
     match (fromList ["humans.txt", "robots.txt"]) $ do
         route   idRoute
         compile copyFileCompiler
 
-    -- Static webpages compiled through Pandoc
+    -- Compile static pages to web root with Pandoc
     match (fromList ["cv.md"]) $ do
-        --route   $ setExtension "html"
         route   $ setExtension ""
         compile $ pandocCompiler
             >>= loadAndApplyTemplate "templates/generic.html" defaultContext
@@ -46,7 +42,6 @@ main = hakyllWith config $ do
             >>= relativizeUrls
 
     match "post/*" $ do
-        --route $ setExtension "html"
         route $ setExtension ""
         compile $ pandocCompiler
             >>= loadAndApplyTemplate "templates/post.html"    postCtx
