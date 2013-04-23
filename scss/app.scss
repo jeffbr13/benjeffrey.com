@@ -49,7 +49,7 @@
 // custom typography ----------------------------------------------------
 h1 {
 }
-h2 {
+h2, h3, h4, h5 {
     margin-top: 1em;
 }
 p {
@@ -82,6 +82,11 @@ nav {
         margin-bottom: 0em;
     }
 }
+.page-title {
+    margin-top: 0em;
+}
+@import "compass/layout/sticky-footer";
+@include sticky-footer(8em, ".wrapper", ".push", "footer");
 .content {
     @include grid-column($columns:9, $last-column:true, $push:1);
 
@@ -93,11 +98,10 @@ nav {
         padding-top: 0em;
     }
 }
-.page-title {
-    margin-top: 0em;
+.footnotes {
+    margin-top: 6em;
+    font-size: 90%;
 }
-@import "compass/layout/sticky-footer";
-@include sticky-footer(8em, ".wrapper", ".push", "footer");
 
 
 // footer text ----------------------------------------------------------
