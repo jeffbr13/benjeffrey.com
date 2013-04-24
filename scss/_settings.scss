@@ -21,7 +21,7 @@ $base-font-size: $em-base;
 // $body-bg: #fff;
 // $body-font-color: #222;
 // $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-$body-font-family: "DejaVu Serif", serif;
+$body-font-family: serif;
 // $body-font-weight: normal;
 // $body-font-style: normal;
 
@@ -104,6 +104,7 @@ $header-font-family: "Lato", "Open Sans", "Helvetica Neue", "Helvetica", Helveti
 // $header-line-height: 1.4;
 $header-line-height: 1.1;
 // $header-top-margin: .2em;
+$header-top-margin: 1em;
 // $header-bottom-margin: .5em;
 // $header-text-rendering: optimizeLegibility;
 

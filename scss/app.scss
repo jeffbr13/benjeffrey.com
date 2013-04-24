@@ -48,9 +48,9 @@
 
 // custom typography ----------------------------------------------------
 h1 {
-}
-h2, h3, h4, h5 {
-    margin-top: 1em;
+    @media #{$portrait} {
+        word-wrap: break-word;
+    }
 }
 p {
     // max-width: 36em;
@@ -120,7 +120,7 @@ footer {
 body {
     border-top: $side-nav-divider-color $side-nav-divider-style 1em;
     // background-image: url("../images/xv.png");
-    background-image: url("../images/whitediamond.png");
+    // background-image: url("../images/whitediamond.png");
     // background-image: url("../images/diamond_upholstery.png");
 }
 .content {
