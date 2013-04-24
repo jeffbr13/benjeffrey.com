@@ -1,6 +1,6 @@
 -----
 title: Styling Pandoc's Syntax Highlighting with CSS
-description: tbd
+description: Pandoc's syntax-highlighting is pretty boring out of the box, so I wrote some CSS using the Solarized colour-scheme.
 date: 2013-04-24
 -----
 
@@ -42,10 +42,10 @@ which is
 > syntax descriptions (http://kate-editor.org/), so any syntax supported
 > by Kate can be added. <cite>[`highlighting-kate` package description][hk]</cite>
 
-It turns out that the syntax tokens are based on definitions provided by
-the KDE text editor, [Kate][]. According to the `highlighting-kate` [HTML
-formatter documentation][hk-html], the classes used to mark-up syntax map
-to the code syntax tokens in the following way:
+So it turns out that the syntax tokens are based on definitions provided
+by the KDE text editor, [Kate][]! According to `highlighting-kate`'s
+[HTML formatter documentation][hk-html], the classes used to mark-up
+syntax map to the code syntax tokens as tabulated below:
 
 span class          code token
 ---------------     -----------------------
@@ -63,8 +63,8 @@ span class          code token
 `.re`               RegionMarker
 `.er`               ErrorTok
 
-These classifications are explained in an old article on the Kate site
-about [writing syntax highlighting files][kate-syntax].
+These classifications are (sort of)explained in an old article on the
+Kate site about [writing syntax-highlighting files][kate-syntax].
 
 It also turns out that a few extra styles are [included][hk-styles] with
 the package, if you want to extract and use them!
