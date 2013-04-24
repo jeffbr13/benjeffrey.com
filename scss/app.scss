@@ -58,6 +58,11 @@ code {
 }
 ul, ol {
     padding-left: 2em;
+    list-style-type: square;
+}
+.date {
+    color: $tertiary-color;
+    font-size: 80%;
 }
 .footnotes {
     font-size: 90%;
