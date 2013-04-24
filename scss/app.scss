@@ -157,6 +157,9 @@ body {
 @import "compass/css3/transition";
 .face, .navigation-list {
     opacity: 0.6;
+    @media (max-width: $small-screen) {
+        opacity: 1.0;
+    }
 }
 .navigation-list {
     @include transition-property(opacity);
