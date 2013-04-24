@@ -1,6 +1,6 @@
 ---
 title: Building benjeffrey.com with Hakyll
-description: This post describes how I use Hakyll, a static-site generator written in Haskell, to build and deploy my website.
+description: This post describes how I build and deploy my website using Hakyll, a static-site generator written in Haskell.
 tags: web-development
 date: 2013-04-24
 ---
@@ -324,7 +324,7 @@ and my current Hakyll configuration [is available on GitHub][hakyll-gh].
     variable with the following lines in your shell config:
 
     ```bash
-    ### ~/.profile
+    # The following goes into ~/.profile, ~/.zshrc, ~/.bashrc, or similar:
 
     # Cabal executables
     PATH=$PATH:$HOME/.cabal/bin
