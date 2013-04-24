@@ -81,6 +81,8 @@ ul, ol {
 nav {
     @media (max-width: $small-screen) {
         @include grid-row;
+        margin-bottom: 1em;
+
         .face {
             display: none;
         }
@@ -196,10 +198,17 @@ pre {
 }
 
 // blog-post info panel -------------------------------------------------
-.info {
+.blog-post-info {
+    @include grid-row(nest);
     @include panel(transparentize($body-bg, 0.5));
 
-    p {
-        max-width: none;
+    font-size: 80%;
+
+    .date {
+        @include grid-column(2);
+        text-align: right;
+    }
+    .description {
+        @include grid-column(10);
     }
 }
