@@ -81,9 +81,9 @@ nav {
         }
         ul {
             @include grid-column(10);
+            @include inline-list;
             li {
-                padding-right: 2em;
-                text-align: right;
+                padding-left: 2em;
             }
         }
     }
