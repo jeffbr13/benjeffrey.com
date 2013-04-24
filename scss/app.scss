@@ -60,6 +60,10 @@ ul, ol {
     padding-left: 2em;
     list-style-type: square;
 }
+cite {
+    margin-top: 2em;
+    float: right;
+}
 .date {
     color: $tertiary-color;
     font-size: 80%;

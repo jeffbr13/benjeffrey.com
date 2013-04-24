@@ -1,34 +1,49 @@
 @import "syntax-highlighting";
 
+// Solarized's colour pallete.
+$base03:    #002B36;
+$base02:    #073642;
+$base01:    #586E75;
+$base00:    #657B83;
+$base0:     #839496;
+$base1:     #93A1A1;
+$base2:     #EEE8D5;
+$base3:     #FDF6E3;
+$yellow:    #B58900;
+$orange:    #CB4B16;
+$red:       #DC322F;
+$magenta:   #D33682;
+$violet:    #6C71C4;
+$blue:      #268BD2;
+$cyan:      #2AA198;
+$green:     #859900;
+
 pre.sourceCode {
-    background-color: #FDF6E3
+    background-color: $base3;
 }
 
-// KeyWordTok
-pre.sourceCode span.kw { color: #268BD2; }
-// DataTypeTok
-pre.sourceCode span.dt { color: #268BD2; }
+.sourceCode {
 
-$number: #D33682;
-// DecValTok (decimal value)
-pre.sourceCode span.dv { color: $number; }
-// BaseNTok
-pre.sourceCode span.bn { color: $number; }
-// FloatTok
-pre.sourceCode span.fl { color: $number; }
-// CharTok
-pre.sourceCode span.ch { color: #DC322F; }
-// StringTok
-pre.sourceCode span.st { color: #2AA198; }
-// CommentTok
-pre.sourceCode span.co { color: #93A1A1; }
-// OtherTok
-pre.sourceCode span.ot { color: #A57800; }
-// AlertTok
-pre.sourceCode span.al { color: #CB4B16; font-weight: bold; }
-// FunctionTok
-pre.sourceCode span.fu { color: #268BD2; }
-// RegionMarkerTok
-pre.sourceCode span.re { }
-// ErrorTok
-pre.sourceCode span.er { color: #D30102; font-weight: bold; }
+    // KeyWordTok
+    .kw { color: $blue; }
+    // DataTypeTok
+    .dt { color: $blue; }
+    // DecValTok (decimal value), BaseNTok, FloatTok
+    .dv, .bn, .fl { color: $magenta; }
+    // CharTok
+     .ch { color: $red; }
+    // StringTok
+     .st { color: $cyan; }
+    // CommentTok
+     .co { color: $base1; }
+    // OtherTok
+     .ot { color: $yellow; }
+    // AlertTok
+     .al { color: $orange; font-weight: bold; }
+    // FunctionTok
+     .fu { color: $blue; }
+    // RegionMarkerTok
+     .re { }
+    // ErrorTok
+     .er { color: $red; font-weight: bold; }
+}
