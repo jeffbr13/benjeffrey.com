@@ -48,9 +48,7 @@
 
 // custom typography ----------------------------------------------------
 h1 {
-    @media #{$portrait} {
-        word-wrap: break-word;
-    }
+    word-wrap: break-word;
 }
 p {
     // max-width: 36em;
@@ -68,22 +66,36 @@ ul, ol {
 
 // Layout ---------------------------------------------------------------
 .wrapper {
-    @include grid-row;
+    @media #{$small} {
+        @include grid-row;
+    }
 }
 nav {
-    @include grid-column(2);
-    margin-top: 5em;
-
-    @media #{$portrait} {
+    @media (max-width: $small-screen) {
         @include grid-row;
-        @include grid-column(6,$push:3);
+        .face {
+            display: none;
+        }
+        .logo {
+            @include grid-column(2);
+        }
+        ul {
+            @include grid-column(10);
+            li {
+                padding-right: 2em;
+                text-align: right;
+            }
+        }
+    }
+
+    @media #{$small} {
+        @include grid-column(2);
+        margin-top: 5em;
     }
 }
 .logo-img {
-    @media #{$portrait} {
-        margin-top: 1em;
-        margin-bottom: 0em;
-    }
+    margin-top: 1em;
+    margin-bottom: 0em;
 }
 .page-title {
     margin-top: 0em;
@@ -91,14 +103,15 @@ nav {
 @import "compass/layout/sticky-footer";
 @include sticky-footer(8em, ".wrapper", ".push", "footer");
 .content {
-    @include grid-column($columns:9, $last-column:true, $push:1);
-
-    padding: 2em;
-
-    @media #{$portrait} {
+    @media (max-width: $small-screen) {
         @include grid-row;
-        @include grid-column(10, $last-column:true);
+        @include grid-column(12);
         padding-top: 0em;
+    }
+
+    @media #{$small} {
+        @include grid-column($columns:9, $last-column:true, $push:1);
+        padding: 2em;
     }
 }
 .footnotes {
@@ -125,15 +138,6 @@ body {
     // background-image: url("../images/whitediamond.png");
     // background-image: url("../images/diamond_upholstery.png");
 }
-.content {
-    background-color: rgba(255,255,255, 0.9);
-    // more obvious background in single-column mode
-    @media #{$portrait} {
-        background-color: rgba(255,255,255, 0.3);
-
-    }
-}
-
 
 // sidebar --------------------------------------------------------------
 .navigation-list {
@@ -142,14 +146,6 @@ body {
 
     ul {
         @include side-nav;
-        li {
-            text-align: center;
-        }
-    }
-}
-.face {
-    @media #{$portrait} {
-        display: none;
     }
 }
 .logo-img {
