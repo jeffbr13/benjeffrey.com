@@ -1,6 +1,6 @@
 ---
 title: Building benjeffrey.com with Hakyll
-description: This post describes how I build and deploy my website using Hakyll, a static-site generator written in Haskell.
+description: How I build and deploy my website using Hakyll, the static-site generator written in Haskell.
 tags: web-development
 date: 2013-04-24
 ---
