@@ -103,7 +103,7 @@ nav {
     }
 
     @media #{$small} {
-        @include grid-column(2);
+        @include grid-column(2, $push:10);
         margin-top: 5em;
     }
 }
@@ -124,7 +124,7 @@ nav {
     }
 
     @media #{$small} {
-        @include grid-column($columns:9, $last-column:true, $push:1);
+        @include grid-column($columns:9, $pull:2);
         padding: 2em;
     }
 }
@@ -203,16 +203,16 @@ pre {
 
 // blog-post info panel -------------------------------------------------
 .blog-post-info {
-    @include grid-row(nest);
-    @include panel(transparentize($body-bg, 0.5));
+    // @include grid-row(nest);
+    // @include panel(transparentize($body-bg, 0.5));
 
     font-size: 80%;
 
-    .date {
-        @include grid-column(2);
-        text-align: right;
-    }
-    .description {
-        @include grid-column(10);
-    }
+    // .date {
+    //     @include grid-column(2);
+    //     text-align: right;
+    // }
+    // .description {
+    //     @include grid-column(10);
+    // }
 }
