@@ -1,5 +1,5 @@
 -----
-title: Styling Pandoc's Syntax Highlighting with CSS
+title: Pandoc Syntax Highlighting with CSS
 description: Improving Pandoc's syntax-highlighting with Solarized and some CSS.
 date: 2013-04-24
 -----
