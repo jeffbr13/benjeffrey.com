@@ -83,7 +83,7 @@ desired. Nevertheless, it's more than adequate for web viewing!
 A standalone version of my Solarized Light colour-scheme CSS is below:
 
 ```css
-pre.sourceCode {
+pre {
     background-color: #FDF6E3
 }
 
