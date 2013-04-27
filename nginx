@@ -1,11 +1,12 @@
 # Nginx server configuration for benjeffrey.com
 
 server {
-    listen              80;         ## listen for ipv4
-#   listen              [::]:80;    ## listen for ipv6
-
     server_name         benjeffrey.com;
     root                /var/www/benjeffrey.com;
+    # HTTPS (IPv4)
+    listen              443 ssl;
+    ssl_certificate     /etc/nginx/ssl/benjeffrey.com.crt;
+    ssl_certificate_key /etc/nginx/ssl/benjeffrey.com.key;
 
     location / {
             index       index.html index.htm index;
@@ -13,8 +14,16 @@ server {
     }
 }
 
-# redirect *.benjeffrey.com to benjeffrey.com
+# redirect *.benjeffrey.net/.com to benjeffrey.com
 server {
-    server_name         *.benjeffrey.net;
-    return              301 $scheme://benjeffrey.net$request_uri;
+    server_name         *.benjeffrey.net *.benjeffrey.com;
+    return              301 https://benjeffrey.com$request_uri;
+}
+
+# redirect HTTP traffic to HTTPS
+server {
+    server_name         benjeffrey.com
+    # HTTP (IPv4)
+    listen              80;
+    return              301 https://benjeffrey.com$request_uri;
 }
