@@ -20,23 +20,26 @@ rather... meh. Certainly not the standard you'd expect from a student of
 
 I wanted the following for my new web setup:
 
-* a static-site generator to build the content, because <del>that's what
-    all the cool kids are doing</del> I liked the idea of my website
+* a static-site generator to build the content, because ~~that's what
+    all the cool kids are doing~~ I liked the idea of my website
     being portable
 * a sensible way to deploy my website, whether that meant using
-* the ability to write posts in [Pandoc Markdown][pandoc md];
-    it supports LaTex expressions, as well as tables and footnotes,
-    making writing more complex documents in Markdown a whole lot easier.
+    a Git-based worklow, or simply `rsync`ing it (as I ended up doing)
+* the ability to write posts in [Pandoc Markdown][pandoc md] with all its
+    fancy extensions; it supports LaTex expressions, as well as tables
+    and footnotes, making fully-featured complex documents in Markdown
+    a whole lot easier.
 
 I came across a cool little project by the name of [Hakyll][], while
 browsing the [Pandoc wiki][] looking for better content templates.
 
-Hakyll performs much the same function as [Jekyll][] and similar
-software. The primary difference between Hakyll and other static site
-generation tools is that Hakyll is written in the functional programming
-language Haskell. Here at the University of Edinburgh, we spent our first
-semester getting to grips with FP in this language, so I wanted to ease
-it in to my day-to-day programming.
+Hakyll performs much the same function as [Jekyll][] and [similar static
+site generators][inspirations]. The primary difference between Hakyll and
+other software is that Hakyll is written in the functional programming
+language [Haskell][]. I wanted to ease this beautiful language in to my
+regular programming, since we spent the entire first semester learning it
+while getting to grips with Functional Programming, here at the
+University of Edinburgh.
 
 
 Customising Hakyll
@@ -46,9 +49,9 @@ Customising Hakyll
 
 **Requirements:** GHC and [Cabal][], Haskell's package-management system.
 
-You should install Hakyll through Cabal, so it can pull in its (many)
-dependencies, then install the default Hakyll script into an
-empty directory with `hakyll-init`[^cabal-scripts]:
+You should install Hakyll on your system through Cabal, so it can pull in
+its (many) dependencies, and then install the default Hakyll script into
+your (empty) website directory with `hakyll-init`[^cabal-scripts]:
 
 ```bash
 cabal install hakyll
@@ -69,19 +72,20 @@ site
 hakyll
 ```
 
-Next thing, I gave my script a more descriptive name:
+Next thing, I give script has a more descriptive name:
 
 ```bash
 mv site.hs hakyll.hs
 ```
 
 One of the most interesting things about the Hakyll package is that it
-can be considered more of a *library* than a program per se. The Hakyll
-*script* installed in the directory by `hakyll-init` is a regular old
-Haskell source file, which imports the Hakyll package and chains together
-its functions to describe a compiler for the static site! To generate the
-static site, simply compile the Haskell source and run the resulting
-executable's `build` command:
+can be used more as a *library* of helpful functions, than a program per
+se. The Hakyll *script* installed in the directory by `hakyll-init` is a
+regular old Haskell source file which imports the Hakyll package and
+chains together various functions to describe [an I/O Action][hakyll
+main] which builds the static site! To generate the static site HTML,
+just compile the Haskell source and run the resulting executable's
+`build` command:
 
 ```bash
 ghc --make hakyll.hs
@@ -123,17 +127,15 @@ As well as moving the ICO file, I also added
 </head>
 ```
 
-into the [default template][] `head` element, just
-in case. To be honest, this really makes the Hakyll rule redundant, as
-the `href` attribute can be anything. But then where'd be the fun in
-that?
+into the [default template][]'s `head` element, just in case. To be
+honest, this really makes the Hakyll rule redundant, as I could set the
+`href` attribute to anything. But where'd be the fun in that?
 
 
-### Copying `humans.txt` and `robots.txt` to the Web Root
+### Copying Documents to the Web Root
 
 The following rule just ensures that the site [`robots.txt`](/robots.txt)
-(advice for web-crawlers) and [`humans.txt`](/humans.txt) (detailing the
-technologies and people involved in development (i.e. me!))
+and [`humans.txt`](/humans.txt) get copied into the web root (i.e. `/`):
 
 ```haskell
 -- copy humans.txt and robots.txt to web root
@@ -143,20 +145,23 @@ match (fromList ["humans.txt", "robots.txt"]) $ do
 ```
 
 
-### Compiling Documents with Pandoc to the Web Root
+### Compiling Documents to the Web Root with Pandoc
 
-I kept the location of my CV on my old site [pretty
-short](http://benjeffrey.net/cv), by saving the HTML file in the document
-root of the webserver as `/cv`, stripping the file suffix. This required
-some Apache `.htaccess` rules for it to actually serve the file as a
-webpage, but it worked. As you can imagine, updating the HTML by hand got
-pretty tiring, and I'd much prefer to keep my CV as a Markdown file.
+I used to keep the location of my CV short by writing it as a raw HTML
+file, and keeping it in the document root of the webserver as `/cv`,
+stripping the file suffix. This required some Apache `.htaccess` rules
+for it to actually serve the file with the correct content-type, but it
+worked. But, as you can imagine, updating HTML by hand got pretty tiring,
+so I now write my CV as a Markdown file.
+
+So that my CV still lives at [/cv](/cv), I wrote a custom rule that
+places documents in the web root, after they've been compiled through
+Pandoc.
 
 The default Hakyll script has a rule for copying static files into the
-generated web root. In order to compile the Markdown file `cv.md` to an
-HTML page throught Pandoc, I used the same rule, only replacing the
+generated web root. I used the same rule, only replacing the
 `copyFileCompiler` with the `pandocCompiler`, then setting it to run
-through the templates.
+through the necessary templates:
 
 ```haskell
 -- Compile static pages to web root with Pandoc
@@ -167,11 +172,8 @@ match (fromList ["cv.md"]) $ do
         >>= relativizeUrls
 ```
 
-The above Hakyll rule compiles the listed files through Pandoc, and
-places them in the web root of the compiled site.
 
-
-### Compiling SCSS through Hakyll
+### Compiling Sass/SCSS through Hakyll
 
 **Requirements:** [Sass][] and [Compass][] gems (installed systemwide).
 
@@ -188,9 +190,9 @@ Luckily, rather than having `compass watch` constantly running when
 editing the Sass stylesheets, The Haddock docs for Hakyll [describe a rule
 for compiling SCSS to CSS][hakyll-scss] using the `unixFilter`.
 
-This next rule (based on the one in Hakyll's docs) compiles matched Sass
-stylesheets when you issue the Hakyll `build` command, but also tells the
-`scss` command to enable Compass and to compress the output:
+This next rule (based on the above) compiles matched the Sass stylesheets
+when you issue the Hakyll `build` command, but also tells the `sass`
+command to enable Compass and to compress the output:
 
 ```haskell
 match "scss/app.scss" $do
@@ -200,10 +202,10 @@ match "scss/app.scss" $do
         >>= return . fmap compressCss
 ```
 
-### Changing the URL Structure
+### Removing URL Suffixes
 
 Wherever `setExtension` is used for HTML pages, I've fed it an empty
-string, so that webpages don't have an ugly `.html` suffix on the end.
+string, so that webpages don't have the ugly `.html` suffix on the end.
 
 ```haskell
 match "post/*" $ do
@@ -221,51 +223,41 @@ Just in case, the templates include the following `meta` tag in the
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 ```
 
-As you may have guessed from the above snippet, I've also moved the
-`posts` directory to `post` to generate URLs like `/post/blog-post`.
-
-This frees up the `/posts` URL as the [Post Archive](/posts), as I
-originally had file/folder conflicts when syncing to the server.
-
-
 
 Deploying with Hakyll
 ---------------------
 
-Hakyll has a great feature hidden away in its documentation:
-the [deploy command][]. It turns out that you can specify an arbitrary
-command in the configuration for Hakyll to execute when you run:
+Hakyll has a great feature hidden away in its documentation: [the
+deployCommand][deploy command]. It turns out that you can specify an
+arbitrary command in the configuration for Hakyll to execute when you
+run:
 
 ```bash
-hakyll-deploy
+./hakyll deploy
 ```
 
-You could set this to execute a separate script for better modularity,
-but since I just `rsync` the changes up to my server (along with an nginx
-server directive) I've put the entire command inside the Hakyll
-configuration. Hakyll needs to be told to run with your new
-configuration, so you'll have to replace the `hakyll :: Rules a -> IO ()`
-function in the line
+One might set this to execute a bash script, but since I just `rsync` the
+files up to my server (which is called `parsley` in my SSH config) I've
+put the entire command inside my Hakyll Configuration value, at the top
+of the script:
+
+```haskell
+--------------------------------------------------------------------------------
+config :: Configuration
+config = defaultConfiguration
+        {   deployCommand = "rsync -avz -e ssh ./_site/ parsley:/var/www/benjeffrey.com/"}
+
+--------------------------------------------------------------------------------
+```
+
+Hakyll needs to be told to run with your new configuration, so you'll
+have to replace the `hakyll :: Rules a -> IO ()` function in the line
 
 ```haskell
 main = hakyll $ do
 ```
 
 with the `hakyllWith :: Configuration -> Rules a -> IO ()` function.
-
-The start of my `hakyll.hs` file looks like:
-
-```haskell
---------------------------------------------------------------------------------
-config :: Configuration
-config = defaultConfiguration
-        {   deployCommand = "rsync -avz -e ssh ./_site/ parsley:/var/www/benjeffrey.com/ && rsync -avz -e ssh ./nginx parsley:/etc/nginx/sites_enabled/benjeffrey.com"}
-
---------------------------------------------------------------------------------
-main :: IO ()
-main = hakyllWith config $ do
-    -- ...
-```
 
 
 Summary
@@ -280,13 +272,13 @@ Summary
 * Git
 * SSH
 
-My final directory structure now looks like:
+My final directory structure now looks something like:
 
 ```
 {directory}
 |-- images
     \- ...
-|-- post
+|-- posts
     \- ...
 |-- scss
    |- app.scss
@@ -295,6 +287,7 @@ My final directory structure now looks like:
        \ ...
 |-- templates
      \- ...
+|-- archive
 |-- config.rb (for Compass)
 |-- cv.md
 |-- hakyll.hs
@@ -302,12 +295,11 @@ My final directory structure now looks like:
 |-- humans.txt
 |-- index.html
 |-- nginx
-|-- posts
 |-- README.md
  \- robots.txt
 ```
 
-and my current Hakyll configuration [is available on GitHub][hakyll-gh].
+with the whole site [available on GitHub][hakyll-gh].
 
 
 
@@ -366,3 +358,6 @@ and my current Hakyll configuration [is available on GitHub][hakyll-gh].
 [hakyll-cmds]: http://jaspervdj.be/hakyll/tutorials/02-basics.html
 [deploy command]: http://jaspervdj.be/hakyll/reference/Hakyll-Core-Configuration.html#v:deployCommand
 [hakyll-gh]: https://github.com/jeffbr13/benjeffrey.com/blob/master/hakyll.hs
+[inspirations]: http://jaspervdj.be/hakyll/about.html#inspiration
+[Haskell]: http://www.haskell.org/
+[hakyll main]: http://jaspervdj.be/hakyll/reference/Hakyll-Main.html#v:hakyll
