@@ -29,19 +29,20 @@ Skills
 
 ### Web-Development:
 
-* developing web applications using [Flask][] & Python (2)
+* building web-applications with [Django][]
+* building back-ends and small applications using [Flask][] & Python
 * styling webpages with CSS and [Sass][]
-* building interactive webpages with JavaScript
-* customizing static blogs and websites built on [Hakyll][]
+* writing interactive webpages using JavaScript
+* creating static blogs and websites with [Hakyll][]
 * running Wordpress-based sites
 
 ### Server-Administration:
 
 * Git/SSH-based development/deployment workflow
 * [Saltstack][] automatic server configuration
-* Apache & Nginx for hosting static websites
+* Apache & Nginx for hosting static websites (with SSL)
 * basic CentOS & Ubuntu Server configuration
-* I even run Arch Linux from time-to-time!
+* I even run [the fabled Arch Linux][Arch] on my laptop from time-to-time!
 
 ### Other Languages
 
@@ -93,7 +94,7 @@ at [the University of Edinburgh](http://www.ed.ac.uk).
 
 ### Hackathons
 
-I've been busy attending
+I've contributed time and code at:
 
 * Startup Weekend
 * Day-of-Code Retreat
@@ -105,19 +106,19 @@ I've been busy attending
 Barnard Castle School (2006-2012)
 ---------------------------------
 
-* A in Mathematics (A2 level)
-* A in Latin (A2 level)
-* A in Further Mathematics (AS level)
-* M1 in Physics (Cambridge Pre-U)
+* A in [Mathematics][OCR Mathematics] (A2 level)
+* A in [Latin][OCR Latin] (A2 level)
+* A in [Further Mathematics][OCR Mathematics] (AS level)
+* M1 in [Physics][Pre-U Physics] (Cambridge Pre-U)
 
 ### Newsletter Designer & Senior Sound Engineer, Barnard Castle School (2011-2012)
 
-I did layout for 15 issues of the school's weekly newsletter, using a custom
-design and the [Scribus NG](http://scribus.net/canvas/Scribus)
+I did layout for 15 issues of the school's weekly newsletter, producing
+custom designs using the [Scribus NG](http://scribus.net/canvas/Scribus)
 desktop-publishing software.
 
 I also contributed pictures to school publications and brochures
-from time-to-time, and photography is still an [occasional hobby of mine][flickr].
+from time-to-time -- photography is still an [occasional hobby of mine][flickr].
 
 I was on the school's Tech Crew, issued with a polo-shirt and a few
 instruction manuals, and given control of the sound-board for all major
@@ -163,3 +164,8 @@ with a yearbook, handed to them on results day.
 [Saltstack]: http://saltstack.com/
 [flickr]: http://www.flickr.com/photos/jeffbr13/
 [INF-YT]: http://inf-yt.org.uk/
+[OCR Mathematics]: http://www.ocr.org.uk/qualifications/as-a-level-gce-mathematics-3890-3892-7890-7892/ "OCR A-Level in Mathematics and Further Mathematics"
+[OCR Latin]: http://www.ocr.org.uk/qualifications/as-a-level-gce-classics-latin-h039-h439/ "OCR A-Level in Latin"
+[Pre-U Physics]: http://www.cie.org.uk/qualifications/academic/uppersec/preu/subjects/subject/preusubject?assdef_id=980 "Cambridge Pre-U in Physics"
+[Arch]: https://www.archlinux.org/
+[Django]: https://www.djangoproject.com/
