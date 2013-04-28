@@ -2,12 +2,23 @@
 {-# LANGUAGE OverloadedStrings #-}
 import           Data.Monoid (mappend)
 import           Hakyll
+import qualified Text.Pandoc.Options as Pandoc.Options
 
 
 --------------------------------------------------------------------------------
 config :: Configuration
 config = defaultConfiguration
         {   deployCommand = "rsync -avz -e ssh ./_site/ parsley:/var/www/benjeffrey.com/ && rsync -avz -e ssh ./nginx parsley:/etc/nginx/sites_enabled/benjeffrey.com"}
+
+pandocWriterOptions :: Pandoc.Options.WriterOptions
+pandocWriterOptions = defaultHakyllWriterOptions
+                        { Pandoc.Options.writerHtml5 = True
+                        , Pandoc.Options.writerHtmlQTags = True
+                        --, Pandoc.Options.writerNumberSections = True
+                        --, Pandoc.Options.writerNumberOffset = [1]
+                        , Pandoc.Options.writerSectionDivs = True
+                        , Pandoc.Options.writerTableOfContents = True
+                    }
 
 --------------------------------------------------------------------------------
 main :: IO ()
@@ -36,14 +47,14 @@ main = hakyllWith config $ do
     -- Compile static pages to web root with Pandoc
     match (fromList ["cv.md"]) $ do
         route   $ setExtension ""
-        compile $ pandocCompiler
+        compile $ pandocCompilerWith defaultHakyllReaderOptions pandocWriterOptions
             >>= loadAndApplyTemplate "templates/generic.html" defaultContext
             >>= loadAndApplyTemplate "templates/default.html" defaultContext
             >>= relativizeUrls
 
     match "posts/*" $ do
         route $ setExtension ""
-        compile $ pandocCompiler
+        compile $ pandocCompilerWith defaultHakyllReaderOptions pandocWriterOptions
             >>= loadAndApplyTemplate "templates/post.html"    postCtx
             >>= loadAndApplyTemplate "templates/default.html" postCtx
             >>= relativizeUrls
