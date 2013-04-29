@@ -1,14 +1,14 @@
 -----
-title: Styling Pandoc's Syntax Highlighting with CSS
-description: Pandoc's syntax-highlighting is pretty boring out of the box, so I wrote some CSS using the Solarized colour-scheme.
+title: Pandoc Syntax Highlighting with CSS
+description: Improving Pandoc's syntax-highlighting with Solarized and some CSS.
 date: 2013-04-24
 -----
 
-[John Macfarlane's Pandoc][pandoc] is an amazingly useful tool for
-creating and converting documents. One of the best things about it is the
-extended Markdown syntax, especially the [GitHub style][gh-syntax]
-[code- block syntax-highlighting][code-blocks], which allows you to mark
-up code inside a Markdown file like thus
+[John Macfarlane's Pandoc][pandoc] is an awesome tool for writing
+documents. One of my favourite features is its extended Markdown syntax;
+especially the [GitHub][gh-syntax]-style
+[fenced code-blocks][code-blocks],
+which let you write code inside a Markdown file like this:
 
     ```bash
     cd some_dir
@@ -16,7 +16,7 @@ up code inside a Markdown file like thus
     # etc...
     ```
 
-and get out:
+and get out this:
 
 ```bash
 cd some_dir
@@ -24,18 +24,22 @@ grep "some text"
 # etc...
 ```
 
-However, the default syntax-highlighting styles leave much to be desired,
-and unless you dig deep into [Pandoc's Haddock docs][pandoc-docs] you
-won't find any information on the internet telling you what the generated
-markup classes (`.kw`, `.co`, `.ot`, etc.) mean, or how you can customize them.
+However, the [stylesheet provided with Pandoc][pandoc css] isn't winning
+any design awards, so I decided to write one which would decorate
+Pandoc's output with something [more well-known][solarized]!
 
 
 The `highlighting-kate` Package
 -------------------------------
 
+Unless you dig into Pandoc's [Haddock documentation][pandoc-docs], you
+won't find much information on the internet telling you what the
+generated markup classes (`.kw`, `.co`, `.ot`, etc.) mean, or how you can
+customize them.
+
 It turns out that Pandoc relies on another one of John Macfarlane's
-creations to mark up code syntax, the [`highlighting-kate` package][hk],
-which is
+creations in order to mark up code syntax, the [`highlighting-kate`
+package][hk],
 
 > a syntax highlighting library with support for nearly one hundred
 > languages. The syntax parsers are automatically generated from Kate
@@ -43,9 +47,11 @@ which is
 > by Kate can be added. <cite>[`highlighting-kate` package description][hk]</cite>
 
 So it turns out that the syntax tokens are based on definitions provided
-by the KDE text editor, [Kate][]! According to `highlighting-kate`'s
-[HTML formatter documentation][hk-html], the classes used to mark-up
-syntax map to the code syntax tokens as tabulated below:
+by the KDE text editor, [Kate][].
+
+According to the documentation for `highlighting-kate`'s
+[HTML Formatters][hk-html], the classes used to mark-up
+syntax tokens are as follows:
 
 span class          code token
 ---------------     -----------------------
@@ -63,27 +69,27 @@ span class          code token
 `.re`               RegionMarker
 `.er`               ErrorTok
 
-These classifications are (sort of)explained in an old article on the
-Kate site about [writing syntax-highlighting files][kate-syntax].
+These classifications are (sort of) explained in an old HOWTO on the
+Kate site for [writing syntax-highlighting files][kate-syntax].
 
 It also turns out that a few extra styles are [included][hk-styles] with
-the package, if you want to extract and use them!
+the `kate-highlighting` package, if you want to extract and use them!
 
 
-a Solarized Light colour-scheme
--------------------------------
+a Solarized Light colour-scheme for Pandoc
+------------------------------------------
 
-Since I wanted something a little more personal, I thought I might
+Since I wanted something a little more distinctive, I decided to
 reimplement one of [Ethan Schoover's Solarized colour-schemes][solarized]
-for Pandoc/`highlighting-kate`'s syntax markup, as the closest versions
-only exist for [Google Code and Codemirror][css-solarized]. It's not
-perfect, as the Kate syntax-highlighting, er, syntax leaves much to be
-desired. Nevertheless, it's more than adequate for web viewing!
+for the Pandoc/`highlighting-kate`'s markup, as I could only find
+versions for [Google Code and Codemirror][css-solarized]. It's not
+perfect, as Kate's syntax-highlighting, er, syntax isn't very expansive,
+but it's more than adequate for web viewing!
 
-A standalone version of my Solarized Light colour-scheme CSS is below:
+This is the CSS for putting Pandoc's code-blocks into Solarized Light:
 
 ```css
-pre.sourceCode {
+pre {
     background-color: #FDF6E3
 }
 
@@ -112,8 +118,8 @@ pre.sourceCode {
 .sourceCode .er { color: #D30102; font-weight: bold; }
 ```
 
-The actual code in use here is written as a Sass mixin -- it's available
-[on GitHub][sass-mixin] if you want to see/use it.
+The actual code in use on [benjeffrey.com](/) is written [as a Sass mixin
+][sass-mixin].
 
 
 
@@ -131,3 +137,4 @@ The actual code in use here is written as a Sass mixin -- it's available
 [solarized]: http://ethanschoonover.com/solarized
 [css-solarized]: http://css-tricks.com/snippets/css/solarized-theme-for-codemirror-and-prettify/
 [sass-mixin]: https://github.com/jeffbr13/benjeffrey.com/blob/master/scss/_syntax-highlighting-solarized-light.scss
+[pandoc css]: http://jaspervdj.be/hakyll/tutorials/faq.html#does-hakyll-support-syntax-highlighting
