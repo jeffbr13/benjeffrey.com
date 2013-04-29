@@ -10,41 +10,29 @@ So I decided to add a nice little padlock (i.e. [HTTPS][]) to
 always better than none at all, even if "the whole notion of [certificate
 authorities][CA] is a pretty sketchy one"[^CAs]. Even famed software
 blogger Jeff Atwood weighs in on the issue, asking "[Should All Web
-Traffic Be Encrypted?][]". And if Jeff Atwood writes about something,
-then it's definitely something you should be thinking about[^ch]. I also
-feel that there's some element of credibility conferred by the padlock in
-your URL bar, similar to having a `.com` compared to a `.ru`.
+Traffic Be Encrypted?][]"[^ch].
 
-Anyway, this page documents the process I went through to get and install
-an SSL certificate in order to encrypt web traffic passing between my
-personal website and you, esteemed readers!
+I also feel that there's some element of credibility conferred by the
+padlock in your URL bar, similar to having a `.com` compared to a `.ru`.
 
 ![Requisite meme.](/images/encrypt-all-the-things.png)
+
+This page documents the process I went through to get and install an SSL
+certificate in order to encrypt web traffic passing between my personal
+website and you, esteemed readers!
 
 I recently registered my domain at Gandi.net, and since they provide [a
 free SSL certificate for the first year][Gandi SSL], there wasn't any
 harm in trying one out.
 
-[My setup][building] is a static website hosted on Nginx, so it wasn't
+My [setup][building] is a static website hosted on Nginx, so it wasn't
 too hard to find documentation for setting up SSL (see the [Resources]
-section for deets). It all boils down to:
-
-* generating an RSA keypair
-* generating a [Certificate Signing Request][CSR]
-    containing the public key
-* uploading the CSR to a Certificate Authority, and getting public key
-    back, having been signed by them
-* getting the Certificate Authority's [intermediate certificate][]
-* concatenating intermediate certificates to your CA-signed certificate,
-    [as the Nginx docs specify][HttpSsl]
-* configuring the private key on the server
-* configuring Nginx to use the private key
-
-The steps I took are detailed in the sections below.
+section at the end for deets). To reproduce my steps, simply follow the
+instructions outlined below.
 
 
-Getting an SSL Certificate
---------------------------
+Getting your SSL Certificate
+----------------------------
 
 **Requirements**: [OpenSSL](https://www.openssl.org/), and a [Certificate
 Authority][CA] to verify your certificate.
@@ -89,6 +77,8 @@ owneship of your domain) you'll upload your CSR, `benjeffrey.com.csr`, to
 Gandi. If you choose the DNS record method, then don't be surprised if
 verification takes a few hours, or even days.
 
+![Gandi.net's certification badge! This site must be secure!](https://www.gandi.net/static/images/ssl/GANDI_SSL_logo_B_std_en.png)
+
 Once this is done, you can download your newly CA-signed certificate (and
 rename it to `benjeffrey.com.crt` in the process).
 
@@ -96,10 +86,10 @@ You'll also need [Gandi's intermediate certificate][Gandi cert],
 `GandiStandardSSLCA.pem`.
 
 
-Setting up Nginx with SSL
--------------------------
+Setting up Nginx for SSL
+------------------------
 
-### Configure Certificates and Keys for Nginx
+### Configure Certificates and Keys
 
 For Nginx, you need to [append all intermediate certificates to your
 server certificate][HttpSsl]. There needs to be a newline between
@@ -122,26 +112,46 @@ Next, upload `benjeffrey.com.crt` and `benjeffrey.com.key`
 to `/etc/nginx/ssl` on your server.
 
 
+### Configure your Site
 
+The following server directives will tell Nginx to serve your website
+over HTTPS only, and give 301 redirect HTTP requests to the HTTPS
+address:
 
+```
+server {
+    server_name         benjeffrey.com;
+    root                /var/www/benjeffrey.com;
+    listen              443 ssl;
+    ssl_certificate     /etc/nginx/ssl/benjeffrey.com.crt;
+    ssl_certificate_key /etc/nginx/ssl/benjeffrey.com.key;
 
+    location / {
+            index       index.html index.htm index;
+            try_files   $uri $uri/ $uri.html =404;
+    }
+}
 
-Remove the passphrase from the RSA key
---------------------------------------
+# redirect HTTP traffic to HTTPS
+server {
+    server_name         benjeffrey.com
+    listen              80;
+    return              301 https://benjeffrey.com$request_uri;
+}
+```
 
+The actual configuration file benjeffrey.com uses is [available on
+GitHub][nginx-conf].
 
-
-
-<a href="https://www.gandi.net/ssl/secured/benjeffrey.com/30951/ccb4de3b85"><img src="https://www.gandi.net/static/images/ssl/GANDI_SSL_logo_B_std_en.png"alt=""></a>
 
 Resources
 ---------
 
-* http://nginx.org/en/docs/http/configuring_https_servers.html
-* http://wiki.nginx.org/HttpSslModule
-* http://wiki.gandi.net/en/ssl
-* http://www.westphahl.net/blog/2012/01/03/setting-up-https-with-nginx-and-startssl/
-* http://rtcamp.com/tutorials/wordpress-nginx-thawte-ssl/
+* <http://nginx.org/en/docs/http/configuring_https_servers.html>
+* <http://wiki.nginx.org/HttpSslModule>
+* <http://wiki.gandi.net/en/ssl>
+* <http://www.westphahl.net/blog/2012/01/03/setting-up-https-with-nginx-and-startssl/>
+* <http://rtcamp.com/tutorials/wordpress-nginx-thawte-ssl/>
 
 
 <!-- footnotes -->
@@ -177,3 +187,4 @@ Resources
 [CA]: http://en.wikipedia.org/wiki/Certificate_authority
 [x509]: http://en.wikipedia.org/wiki/X.509
 [ssl]: http://en.wikipedia.org/wiki/Secure_Sockets_Layer#Simple_TLS_handshake
+[nginx-conf]: https://github.com/jeffbr13/benjeffrey.com/blob/master/nginx
