@@ -1,34 +1,39 @@
 ---
-title: Setting up HTTPS on Nginx with Gandi
-description: How to get an SSL certificate from Gandi and use it with Nginx
+title: Setting up Gandi SSL on Nginx
+description: How to get an HTTPS padlock and use it, with Nginx
 date: 2013-04-30
 ---
 
-So I decided to add a nice little padlock (i.e. [HTTPS][]) to
-[benjeffrey.com][], after reading Lukasa's article "[HTTPS All The Things
-(Especially This Thing)][lukasa]". Naturally, some level of encryption is
-always better than none at all, even if "the whole notion of [certificate
-authorities][CA] is a pretty sketchy one"[^CAs]. Even famed software
-blogger Jeff Atwood weighs in on the issue, asking "[Should All Web
-Traffic Be Encrypted?][]"[^ch].
-
-I also feel that there's some element of credibility conferred by the
-padlock in your URL bar, similar to having a `.com` compared to a `.ru`.
+So I decided to add a nice little [HTTPS][] padlock to
+[benjeffrey.com][], having read Lukasa's article "[HTTPS All The Things
+(Especially This Thing)][lukasa]". After all, some encryption is always
+better than none, as a rule[^CAs]. Even for websites without
+authentication, such as this one. Esteemed software blogger Jeff Atwood
+weighs in on the issue too, asking "[Should All Web Traffic Be
+Encrypted?][]"[^ch].
 
 ![Requisite meme.](/images/encrypt-all-the-things.png)
 
-This page documents the process I went through to get and install an SSL
-certificate in order to encrypt web traffic passing between my personal
-website and you, esteemed readers!
+I reckon (in a totally subjective manner) that there's also a certain
+element of credibility conferred by that padlock next to your URL -
+similar to the comfort of the familiar dotcom, when compared to the
+perceived sketchiness of a [.ru](https://en.wikipedia.org/wiki/.ru) or
+the hipster-startup vibe of a [.ly](https://en.wikipedia.org/wiki/.ly)
+address.
 
 I recently registered my domain at Gandi.net, and since they provide [a
 free SSL certificate for the first year][Gandi SSL], there wasn't any
 harm in trying one out.
 
-My [setup][building] is a static website hosted on an Nginx webserver, so
-it wasn't too hard to find documentation for setting up SSL (see the
-[Resources] section at the end for deets). To reproduce my steps, simply
-follow the instructions outlined below.
+This page documents the process I went through to get and install an SSL
+certificate in order to encrypt web traffic passing between my personal
+website and you, my esteemed readers!
+
+My setup is just [a static website][building] hosted on an Nginx
+webserver, so it wasn't hard to find documentation to set up SSL (see
+the [Resources] section for deets). To reproduce my steps, simply follow
+the instructions outlined below, replacing `benjeffrey.com` etc. with
+your own domain name... You'll figure it out.
 
 
 Getting your SSL Certificate
@@ -39,13 +44,14 @@ Authority][CA] to verify your certificate.
 
 ### Generate an RSA Keypair
 
-Connections with SSL are negotiated ([approximately][ssl]) using
-asymmetric encryption. The client uses your site's public key to encrypt
-packets to the webserver, which decrypts them with its private key,
-before the connection drops to computationally-cheaper symmetric
-encryption.
+Connections with SSL are negotiated using asymmetric public-key
+encryption ([approximately][ssl]). The client uses your site's public key
+to encrypt packets to the webserver, which then decrypts them with its
+private key, before the connection drops to computationally-cheaper
+symmetric encryption.
 
-So our first step is generating the aforementioned keypair with OpenSSl:
+So our first step is generating this aforementioned public/private
+keypair with OpenSSl:
 
 ```bash
 openssl genrsa -des3 -out benjeffrey.com_encrypted.key 4096
@@ -75,9 +81,10 @@ And answer the questions you're given.
 In the SSL certificate-signing process (which requires you to prove
 owneship of your domain) you'll upload your CSR, `benjeffrey.com.csr`, to
 Gandi. If you choose the DNS record method, then don't be surprised if
-verification takes a few hours, or even days.
+verification takes a few hours - I left the process for a day, then came
+back to it once everything had propagated.
 
-![Gandi.net's certification badge! This site must be secure!](https://www.gandi.net/static/images/ssl/GANDI_SSL_logo_B_std_en.png)
+![You've unlocked Gandi.net's certification badge. Wow, this site must be secure!](https://www.gandi.net/static/images/ssl/GANDI_SSL_logo_B_std_en.png)
 
 Once this is done, you can download your newly CA-signed certificate (and
 rename it to `benjeffrey.com.crt` in the process).
@@ -91,10 +98,12 @@ Setting up Nginx for SSL
 
 ### Configure Certificates and Keys
 
-For Nginx, you need to [append all intermediate certificates to your
-server certificate][HttpSsl]. There needs to be a newline between
-your certificates, otherwise Nginx will throw an error on loading
-the certificate file:
+Since Nginx doesn't combine chain certificates itself, you need to append
+any and all intermediate certificates to your server certificate,
+according to the [HttpSsl Module docs][HttpSsl]. I found that
+the Gandi-issued certificate is missing a newline at the end,
+causing Nginx to throw an error unless you add one yourself,
+before concatenating it with the intermediate certificate:
 
 ```bash
 echo "\n" >> benjeffrey.com.crt
@@ -102,21 +111,27 @@ cat benjeffrey.com.crt GandiStandardSSLCA.pem > benjeffrey.com.crt
 ```
 
 Nginx also needs to be able to access the private key we created before,
-so we remove the passphrase from it:
+to decode packets encypted with the public key in your certificate.
+Aditionally, the private key should only be accessible to the user
+running the nginx process. So we remove the passphrase from the private
+key, and change it's owner and permissions to be more restrictive:
 
 ```bash
 openssl rsa -in benjeffrey.com_encrypted.key -out benjeffrey.com.key
+# root usually runs the nginx process:
+chown root:root benjeffrey.com.key
+chmod 400 benjeffrey.com.key
 ```
-
-Next, upload `benjeffrey.com.crt` and `benjeffrey.com.key`
-to `/etc/nginx/ssl` on your server.
 
 
 ### Configure your Site
 
-The following server directives will tell Nginx to serve your website
-over HTTPS only, and give 301 redirect HTTP requests to the HTTPS
-address:
+The following server directives tell Nginx to
+
+1. serve `benjeffrey.com` over HTTPS only, and
+2. to redirect any clients which try to access `http://benjeffrey.com`
+    to the equivalent HTTPS address,
+    with a [301 Moved Permanently][301] status code:
 
 ```
 server {
@@ -140,7 +155,7 @@ server {
 }
 ```
 
-The actual configuration file benjeffrey.com uses is [available on
+The actual configuration file used for benjeffrey.com is [available on
 GitHub][nginx-conf].
 
 
@@ -156,14 +171,19 @@ Resources
 
 <!-- footnotes -->
 
-[^CAs]: Certificate authorities present a single point of failure in
-    the [X.509 Public Key Infrastructure][x509], due to the amount
-    of trust placed in them, as has been seen before when
-    root certificates have been stolen then used in exploits.
+[^CAs]: As Lukasa [points out][lukasa]:
+
+    > the whole notion of [certificate authorities][CA] is a pretty sketchy one
+
+    The commonly-accepted wisdom seems to be that CAs present a single
+    point of failure in the [X.509 Public Key Infrastructure][x509],
+    due to the amount of trust placed in them;
+    CA credentials have been stolen before, and used to forge
+    certificates, showing the dangers to be very real.
 [^ch]: Jeff actually concludes that (emphasis mine):
 
     > We need to work toward making HTTPS easier, faster,
-    > and most of all, the default for logged in users.
+    > and most of all, the default for *logged in* users.
 
     but, for tiny sites with equally tiny hosting costs, why not extend
     the grace to everyone?
@@ -188,3 +208,4 @@ Resources
 [x509]: http://en.wikipedia.org/wiki/X.509
 [ssl]: http://en.wikipedia.org/wiki/Secure_Sockets_Layer#Simple_TLS_handshake
 [nginx-conf]: https://github.com/jeffbr13/benjeffrey.com/blob/master/nginx
+[301]: http://en.wikipedia.org/wiki/HTTP_301
