@@ -5,12 +5,11 @@ date: 2013-04-30
 ---
 
 So I decided to add a nice little [HTTPS][] padlock to
-[benjeffrey.com][], having read Lukasa's article "[HTTPS All The Things
-(Especially This Thing)][lukasa]". After all, some encryption is always
-better than none, as a rule[^CAs]. Even for websites without
-authentication, such as this one. Esteemed software blogger Jeff Atwood
-weighs in on the issue too, asking "[Should All Web Traffic Be
-Encrypted?][]"[^ch].
+[benjeffrey.com][], having read Lukasa's article "[HTTPS All The
+Things][lukasa]". After all, some amount of encryption is always better
+than none, as a rule[^CAs]. Even for websites without authentication,
+such as this one. Esteemed software blogger Jeff Atwood weighs in on the
+issue too, asking "[Should All Web Traffic Be Encrypted?][]"[^ch].
 
 ![Requisite meme.](/images/encrypt-all-the-things.png)
 
@@ -171,7 +170,8 @@ Resources
 
 <!-- footnotes -->
 
-[^CAs]: As Lukasa [points out][lukasa]:
+[^CAs]: Although all forms of encryption are not created equal.
+    As Lukasa [points out][lukasa]:
 
     > the whole notion of [certificate authorities][CA] is a pretty sketchy one
 
