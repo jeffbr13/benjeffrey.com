@@ -1,7 +1,7 @@
 ---
 title: Setting up HTTPS on Nginx with Gandi
-description: null
-date: 2013-04-31
+description: How to get an SSL certificate from Gandi and use it with Nginx
+date: 2013-04-30
 ---
 
 So I decided to add a nice little padlock (i.e. [HTTPS][]) to
@@ -25,10 +25,10 @@ I recently registered my domain at Gandi.net, and since they provide [a
 free SSL certificate for the first year][Gandi SSL], there wasn't any
 harm in trying one out.
 
-My [setup][building] is a static website hosted on Nginx, so it wasn't
-too hard to find documentation for setting up SSL (see the [Resources]
-section at the end for deets). To reproduce my steps, simply follow the
-instructions outlined below.
+My [setup][building] is a static website hosted on an Nginx webserver, so
+it wasn't too hard to find documentation for setting up SSL (see the
+[Resources] section at the end for deets). To reproduce my steps, simply
+follow the instructions outlined below.
 
 
 Getting your SSL Certificate
