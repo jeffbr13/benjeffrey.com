@@ -61,8 +61,8 @@ ul, ol {
     list-style-type: square;
 }
 cite {
-    margin-top: 2em;
-    float: right;
+    display: block;
+    text-align: right;
 }
 .date {
     color: $tertiary-color;
