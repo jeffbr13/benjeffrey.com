@@ -13,8 +13,24 @@
    inkscape:version="0.48.4 r9939"
    sodipodi:docname="logo.svg">
 
-  <defs
-     id="defs2987" />
+
+    <style type="text/css">
+    <![CDATA[
+      @font-face {
+        font-family: 'Lato';
+        src: local('Lato Bold'), local('Lato-Bold'), url(https://themes.googleusercontent.com/static/fonts/lato/v6/wkfQbvfT_02e2IWO3yYueQ.woff) format('woff');
+        font-weight: bold;
+        font-style: normal;
+
+      }
+      text, textpath {
+        font-family: "Lato", Ubuntu, "Droid Serif", "Trebuchet MS", sans-serif;
+        font-size: 34px;
+        font-weight: bold;
+        fill:#1e476e;
+      }
+    ]]>
+    </style>
 
   <metadata
      id="metadata2990">
@@ -31,7 +47,7 @@
 
   <g id="layer1">
     <text x="0" y="26" id="text2993">
-      <tspan id="tspan2995" style="font-size:34px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#1e476e;fill-opacity:1;font-family:Lato,Ubuntu,serif;-inkscape-font-specification:Lato Bold">BRJ</tspan>
+      <tspan id="tspan2995">BRJ</tspan>
     </text>
     <circle cx="32" cy="36" r="4" style="fill:#8c1c3c;fill-opacity:1"/>
   </g>
