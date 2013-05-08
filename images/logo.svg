@@ -1,6 +1,3 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
@@ -10,34 +7,15 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="64"
-   height="46"
+   height="42"
    id="svg2985"
    version="1.1"
    inkscape:version="0.48.4 r9939"
    sodipodi:docname="logo.svg">
+
   <defs
      id="defs2987" />
-  <sodipodi:namedview
-     id="base"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:pageopacity="0.0"
-     inkscape:pageshadow="2"
-     inkscape:zoom="5.5"
-     inkscape:cx="-2.2727273"
-     inkscape:cy="32"
-     inkscape:current-layer="layer1"
-     showgrid="true"
-     inkscape:document-units="px"
-     inkscape:grid-bbox="true"
-     inkscape:window-width="1366"
-     inkscape:window-height="744"
-     inkscape:window-x="0"
-     inkscape:window-y="24"
-     inkscape:window-maximized="1"
-     fit-margin-top="20"
-     fit-margin-bottom="0.1" />
+
   <metadata
      id="metadata2990">
     <rdf:RDF>
@@ -50,30 +28,11 @@
       </cc:Work>
     </rdf:RDF>
   </metadata>
-  <g
-     id="layer1"
-     inkscape:label="Layer 1"
-     inkscape:groupmode="layer"
-     transform="translate(0,-18)">
-    <text
-       xml:space="preserve"
-       x="2"
-       y="44"
-       id="text2993"
-       sodipodi:linespacing="125%"
-       transform="scale(0.97618404,1.024397)"><tspan
-         sodipodi:role="line"
-         id="tspan2995"
-         style="font-size:35px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#1e476e;fill-opacity:1;font-family:Lato,Helvetica Neue,serif;-inkscape-font-specification:Lato Bold">BRJ</tspan></text>
-    <path
-       sodipodi:type="arc"
-       id="path2997"
-       sodipodi:cx="27"
-       sodipodi:cy="49.090908"
-       sodipodi:rx="3.3636363"
-       sodipodi:ry="3.2727273"
-       d="m 30.363636,49.090908 a 3.3636363,3.2727273 0 1 1 -6.727272,0 3.3636363,3.2727273 0 1 1 6.727272,0 z"
-       style="fill:#8c1c3c;fill-opacity:1"
-       transform="matrix(1.1891892,0,0,1.2222222,-0.10810979,-0.99999754)" />
+
+  <g id="layer1">
+    <text x="0" y="26" id="text2993">
+      <tspan id="tspan2995" style="font-size:34px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#1e476e;fill-opacity:1;font-family:Lato,Ubuntu,serif;-inkscape-font-specification:Lato Bold">BRJ</tspan>
+    </text>
+    <circle cx="32" cy="36" r="4" style="fill:#8c1c3c;fill-opacity:1"/>
   </g>
 </svg>
