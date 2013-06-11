@@ -190,7 +190,7 @@ body {
         opacity: 1.0;
     }
 }
-.navigation-list {
+.face, .navigation-list {
     @include transition-property(opacity);
     @include transition-duration(0.5s);
     @include transition-timing-function(ease);
