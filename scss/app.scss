@@ -110,7 +110,7 @@ nav {
 
     @media #{$small} {
         @include grid-column(2, $push:10);
-        margin-top: 5em;
+        margin-top: 3em;
     }
 }
 .logo-img {
