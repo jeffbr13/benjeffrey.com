@@ -18,13 +18,12 @@
     <![CDATA[
       @font-face {
         font-family: 'Lato';
-        src: local('Lato Bold'), local('Lato-Bold'), url(https://themes.googleusercontent.com/static/fonts/lato/v6/wkfQbvfT_02e2IWO3yYueQ.woff) format('woff');
-        font-weight: bold;
         font-style: normal;
-
+        font-weight: 700;
+        src: local('Lato Bold'), local('Lato-Bold'), url(https://themes.googleusercontent.com/static/fonts/lato/v6/wkfQbvfT_02e2IWO3yYueQ.woff) format('woff');
       }
       text, textpath {
-        font-family: "Lato", Ubuntu, "Droid Serif", "Trebuchet MS", sans-serif;
+        font-family: "Lato", Ubuntu, sans-serif;
         font-size: 34px;
         font-weight: bold;
         fill:#1e476e;
