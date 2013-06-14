@@ -20,7 +20,7 @@
         font-family: 'Lato';
         font-style: normal;
         font-weight: 700;
-        src: local('Lato Bold'), local('Lato-Bold'), url(https://themes.googleusercontent.com/static/fonts/lato/v6/wkfQbvfT_02e2IWO3yYueQ.woff) format('woff');
+        src: local('Lato Bold'), local('Lato-Bold'), url(//themes.googleusercontent.com/static/fonts/lato/v6/wkfQbvfT_02e2IWO3yYueQ.woff) format('woff');
       }
       text, textpath {
         font-family: "Lato", Ubuntu, sans-serif;
