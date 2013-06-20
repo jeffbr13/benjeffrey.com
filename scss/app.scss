@@ -52,6 +52,7 @@ h1 {
 }
 p {
     // max-width: 36em;
+    text-align: justify;
 }
 code {
     font-size: 90%;
@@ -62,10 +63,6 @@ ul, ol {
 cite {
     display: block;
     text-align: right;
-}
-.date {
-    color: $tertiary-color;
-    font-size: 80%;
 }
 .blog-description {
     font-size: 90%;
@@ -78,6 +75,8 @@ cite {
 h1, h2, h3, h4, h5 {
     a {
         color: $header-font-color;
+        &:hover,
+        &:focus { color: lighten($header-font-color, 10%); }
     }
 }
 
@@ -156,7 +155,7 @@ footer {
     p {
         text-align: center;
         max-width: none;
-        color: $code-color;
+        color: $tertiary-color;
     }
 }
 
@@ -216,18 +215,38 @@ pre {
     background-color: rgba(218,218,218, 0.4)
 }
 
-// blog-post info panel -------------------------------------------------
-.blog-post-info {
-    // @include grid-row(nest);
+// posts -----------------------------------------------------------------------
+.post-info {
+    @include grid-row(nest);
     // @include panel(transparentize($body-bg, 0.5));
+    margin-bottom: 2em;
 
     font-size: 80%;
 
-    // .date {
-    //     @include grid-column(2);
-    //     text-align: right;
-    // }
-    // .description {
-    //     @include grid-column(10);
-    // }
+    .ancestors {
+        @include grid-column(4);
+        a {
+            padding-right: 0.5em;
+        }
+        // a:after {
+        //     content: " »";
+        // }
+    }
+
+    .date {
+        @include grid-column(8, true);
+        text-align: right;
+        color: $tertiary-color;
+        &:before {
+            content: "[modified "
+        }
+        &:after {
+            content: "]"
+        }
+    }
+}
+
+
+.post-title {
+    font-weight: bold;
 }

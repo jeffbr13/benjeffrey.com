@@ -24,6 +24,8 @@ pandocWriterOptions = defaultHakyllWriterOptions
 main :: IO ()
 main = hakyllWith config $ do
 
+    match "templates/*" $ compile templateCompiler
+
     -- copy site icon to `favicon.ico`
     match "images/favicon.ico" $ do
         route   (constRoute "favicon.ico")
@@ -81,11 +83,8 @@ main = hakyllWith config $ do
 
             getResourceBody
                 >>= applyAsTemplate indexCtx
-                >>= loadAndApplyTemplate "templates/generic.html" postCtx
                 >>= loadAndApplyTemplate "templates/default.html" postCtx
                 >>= relativizeUrls
-
-    match "templates/*" $ compile templateCompiler
 
 
 --------------------------------------------------------------------------------
