@@ -130,7 +130,7 @@ nav {
 
     @media #{$small} {
         @include grid-column($columns:9, $pull:2);
-        padding: 2em;
+        padding: 1em;
     }
 }
 .footnotes {
@@ -228,9 +228,6 @@ pre {
         a {
             padding-right: 0.5em;
         }
-        // a:after {
-        //     content: " »";
-        // }
     }
 
     .date {
