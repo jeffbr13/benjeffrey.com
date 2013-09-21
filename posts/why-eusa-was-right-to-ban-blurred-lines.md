@@ -30,7 +30,7 @@ Talk about proportional and well-measured response! At the very least they deser
 
 At the end of the day, what did EUSA actually do?
 
-They did not 'ban' the track on campus, in any literal sense; EUSA operates (owns?) the venues where the track is no longer allowed to be played. Without stepping on anybody's rights, it is perfectly entitled to choose it's songs or [refuse to sell products][page 3 ban] as it sees fit.
+They did not 'ban' or 'censor' the track on campus, in any literal or meaningful sense; EUSA operates (owns?) the venues where the track is no longer allowed to be played. Without stepping on anybody's rights, it is perfectly entitled to choose it's songs or [refuse to sell products][page 3 ban] as it sees fit.
 
 And yes, if EUSA did follow it's zero-tolerance policy to it's logical conclusion then they'd have to stop playing a whole bunch of other songs, too. But banning songs isn't the point! I don't believe that (all) the folks at EUSA want to play moral arbiter and make people suffer by dictating what they can/can't listen to. They could have done that much more effectively by following their principle to the letter,  actually banning a significant portion of modern recordings, and making their venues irrelevant in the process. But they're no Chairman Mao. This wasn't meant to be cultural revolution, it was *targeted assassination*. 
 
