@@ -24,7 +24,7 @@ Did EUSA overexert their powers in this situation? I would say not.
 - The track was on it's way out anyway,
 - If you still want to hear it you can go *anywhere* else in Edinburgh.
 
-Talk about proportional and well-measured response! At the very least they deserve an internet meme for all that:
+Talk about a proportional and effective response! At the very least they deserve an internet meme for all that:
 
 ![BANS OVERPLAYED POP SONG. SPARKS INTERNATIONAL DEBATE ON MISOGYNY.](/images/success-kid-blurred-lines-ban.png)
 
