@@ -74,7 +74,8 @@ cite {
 // links in titles
 h1, h2, h3, h4, h5 {
     a {
-        color: $header-font-color;
+        color: inherit;
+        text-decoration: none;
         &:hover,
         &:focus { color: lighten($header-font-color, 10%); }
     }

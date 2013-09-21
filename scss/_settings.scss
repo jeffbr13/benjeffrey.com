@@ -150,10 +150,10 @@ $code-font-family: Consolas, 'DejaVu Sans Mono', monospace;
 $code-font-weight: normal;
 
 // We use these to style anchors
-// $anchor-text-decoration: none;
+$anchor-text-decoration: underline;
 // $anchor-font-color: $primary-color;
-$anchor-font-color: lighten($primary-color, 25%);
-$anchor-font-color-hover: lighten($primary-color, 35%);
+$anchor-font-color: $body-font-color;
+$anchor-font-color-hover: lighten($body-font-color, 15%);
 
 // We use these to style the <hr> element
 // $hr-border-width: 1px;
