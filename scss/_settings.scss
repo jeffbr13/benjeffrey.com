@@ -36,7 +36,7 @@ $font-smoothing: subpixel-antialiased;
 // http://www.colourlovers.com/palette/1464688/Intellectual_Owl
 $primary-color: rgb(30,71,110);
 $secondary-color: rgb(140,28,60);
-$tertiary-color: rgb(154,134,121);
+$tertiary-color: lighten($primary-color, 10%);
 $quaternary-color: rgb(249,247,233);
 // $alert-color: $secondary-color;
 // We use these as default colors throughout
