@@ -15,13 +15,12 @@
 $em-base: 16px;
 $base-font-size: $em-base;
 
-@import url("//fonts.googleapis.com/css?family=Lato:700,700italic");
-@import url("//fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic");
+@import url(http://fonts.googleapis.com/css?family=Lato:700|Arvo:400,700,400italic,700italic);
 
 // We use these to control various global styles
 // $body-bg: #fff;
 // $body-font-color: #222;
-$body-font-family: "PT Sans", Helvetica, Arial, sans-serif;
+$body-font-family: "Arvo", Helvetica, Arial, sans-serif;
 // $body-font-family: sans-serif;
 // $body-font-weight: normal;
 // $body-font-style: normal;
