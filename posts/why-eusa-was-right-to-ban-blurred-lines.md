@@ -30,14 +30,19 @@ Talk about proportional and well-measured response! At the very least they deser
 
 At the end of the day, what did EUSA actually do?
 
-They did not 'ban' or 'censor' the track on campus, in any literal or meaningful sense; EUSA operates (owns?) the venues where the track is no longer allowed to be played. Without stepping on anybody's rights, it is perfectly entitled to choose it's songs or [refuse to sell products][page 3 ban] as it sees fit.
+They did not 'ban' or 'censor' the track on campus, in any literal or meaningful sense; EUSA operates (owns?) the venues where the track is no longer allowed to be played. Without stepping on anybody's rights, it is perfectly entitled to choose it's songs or [refuse to sell products][page 3 ban] as it sees fit[^1].
 
 And yes, if EUSA did follow it's zero-tolerance policy to it's logical conclusion then they'd have to stop playing a whole bunch of other songs, too. But banning songs isn't the point! I don't believe that (all) the folks at EUSA want to play moral arbiter and make people suffer by dictating what they can/can't listen to. They could have done that much more effectively by following their principle to the letter,  actually banning a significant portion of modern recordings, and making their venues irrelevant in the process. But they're no Chairman Mao. This wasn't meant to be cultural revolution, it was *targeted assassination*. 
 
-**EUSA have banned a popular (but fading) track so that we have this debate in the first place.** After all, if you still want to hear Blurred Lines in a club, there are plenty of venues in Edinburgh which will happily play radio-music for you every night of the week[^1].
+**EUSA have banned a popular (but fading) track so that we have this debate in the first place.** After all, if you still want to hear Blurred Lines in a club, there are plenty of venues in Edinburgh which will happily play radio-music for you every night of the week[^2].
 
 The University of Edinburgh has apparently been subject to ["public humiliation"](http://tychy.wordpress.com/2013/09/15/another-eusa-censorship-disaster/) in the [national](http://www.bbc.co.uk/newsbeat/24071219) (and now [international](https://news.google.com/news?ned=us&q=blurred%20lines%20eusa%20ban&btnG=Search+News)) press because of EUSA taking this stand, 'over a song', but hey, you're the ones wailing about it. And all this debate still sounds better than hearing *that damn song again*...
 
 [page 3 ban]: http://www.journal-online.co.uk/article/9288-eusa-referendum-debate-sparks-indepth-discussion "There was an attempt to ban The Sun newspaper in EUSA shops last October, but I'm not sure whether it was successful or not."
 
-[^1]: I personally found the DJ at [Castle Clvb](http://www.theskinny.co.uk/venue/9432-castle_club) last Saturday night to be extremely entertaining. Not only did he have a library consisting entirely of circa 2007 rap music (i.e. 50 Cent and Eminem) but he also had this ability, nay *need*, to change tracks every 90 seconds on the dot! 2.5/5, funniest DJ set ever.
+
+[^1]: UPDATE: To clarify further, there are two reasons why this is not censorship:
+1. As an entity, EUSA is entitled to play whatever it likes on it's own damn property, much in the same way I am. If I were in charge of club playlists, I'd have a *much* longer list of "no-play" songs. However, my refusal to blare [Rebecca Black's 'Friday'](https://www.youtube.com/watch?v=kfVsfOSbJY0) on my laptop or theoretical club soundsystem does not constitute censorship of this track either. The difference is that in most venues you can only vote with your feet/wallets but since EUSA is a democratic organization, [you have representatives](http://www.eusa.ed.ac.uk/getinvolved/elections/yourrepresentatives/find/) who you can complain to, if you don't like it.
+2. Again, this isn't really a "campus-wide ban". EUSA does not want EUSA employees to play the track in question on EUSA property. You can still blare "Blurred Lines" on your phone in Bristo Square, or listen to it on your headphones in the library if you like. EUSA have no power to impose any sort of restriction on your poor taste. :-)
+
+[^2]: I personally found the DJ at [Castle Clvb](http://www.theskinny.co.uk/venue/9432-castle_club) last Saturday night to be extremely entertaining. Not only did he have a library consisting entirely of circa 2007 rap music (i.e. 50 Cent and Eminem) but he also had this ability, nay *need*, to change tracks every 90 seconds on the dot! 2.5/5, funniest DJ set ever.
