@@ -162,7 +162,7 @@ with a yearbook, handed to them on results day.
 [Sass]: http://sass-lang.com/
 [Hakyll]: http://jaspervdj.be/hakyll/
 [Saltstack]: http://saltstack.com/
-[flickr]: http://www.flickr.com/photos/jeffbr13/
+[flickr]: http://www.flickr.com/photos/jeffbr13/sets
 [INF-YT]: http://inf-yt.org.uk/
 [OCR Mathematics]: http://www.ocr.org.uk/qualifications/as-a-level-gce-mathematics-3890-3892-7890-7892/ "OCR A-Level in Mathematics and Further Mathematics"
 [OCR Latin]: http://www.ocr.org.uk/qualifications/as-a-level-gce-classics-latin-h039-h439/ "OCR A-Level in Latin"
