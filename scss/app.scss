@@ -57,7 +57,7 @@ p {
 code {
     font-size: 90%;
 }
-ul, ol {
+ul {
     list-style-type: square;
 }
 cite {
@@ -129,7 +129,7 @@ nav {
     }
 
     @media #{$small} {
-        @include grid-column($columns:9, $pull:2);
+        @include grid-column($columns:8, $pull:2);
         padding: 1em;
     }
 }
