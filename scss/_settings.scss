@@ -16,11 +16,12 @@ $em-base: 16px;
 $base-font-size: $em-base;
 
 @import url("//fonts.googleapis.com/css?family=Lato:700,700italic");
+@import url("//fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic");
 
 // We use these to control various global styles
 // $body-bg: #fff;
 // $body-font-color: #222;
-// $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+// $body-font-family: "PT Sans", Helvetica, Arial, sans-serif;
 $body-font-family: sans-serif;
 // $body-font-weight: normal;
 // $body-font-style: normal;
@@ -98,7 +99,7 @@ $quaternary-color: rgb(249,247,233);
 
 // We use these to control header font styles
 // $header-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-$header-font-family: "Lato", "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$header-font-family: "Lato", "Open Sans", "Helvetica", Helvetica, Arial, sans-serif;
 // $header-font-weight: bold;
 // $header-font-style: normal;
 // $header-font-color: #222;
