@@ -136,7 +136,7 @@ nav {
 
 @import "compass/layout/sticky-footer";
 @include sticky-footer(12em, ".wrapper", ".push", "footer");
-.content {
+.row {
     @media (max-width: $small-screen) {
         @include grid-column(12);
         padding-top: 0em;
