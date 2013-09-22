@@ -91,7 +91,6 @@ h1, h2, h3, h4, h5 {
 }
 nav {
     @media (max-width: $small-screen) {
-        @include grid-row;
         margin-bottom: 1em;
 
         .face {
@@ -110,7 +109,7 @@ nav {
     }
 
     @media #{$small} {
-        @include grid-column(2, $push:10);
+        @include grid-column(3, $push:9);
         margin-top: 3em;
     }
 }
@@ -139,13 +138,12 @@ nav {
 @include sticky-footer(12em, ".wrapper", ".push", "footer");
 .content {
     @media (max-width: $small-screen) {
-        @include grid-row;
         @include grid-column(12);
         padding-top: 0em;
     }
 
     @media #{$small} {
-        @include grid-column($columns:8, $pull:2);
+        @include grid-column($columns:6, $offset:2, $pull:3);
         padding: 1em;
     }
 }
