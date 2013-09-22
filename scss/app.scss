@@ -121,6 +121,20 @@ nav {
 .page-title {
     margin-top: 0em;
 }
+.name {
+    font-size: 2em;
+    padding-bottom: 0.3em;
+}
+.username {
+    font-size: 3em;
+    font-weight: bold;
+}
+.name, .username {
+    a {
+        text-decoration: none;
+    }
+}
+
 @import "compass/layout/sticky-footer";
 @include sticky-footer(12em, ".wrapper", ".push", "footer");
 .content {
@@ -171,7 +185,6 @@ body {
 
 // sidebar --------------------------------------------------------------
 .navigation-list {
-    margin-top: 1em;
     margin-bottom: 2em;
 
     ul {
@@ -185,13 +198,11 @@ body {
 
 // sidebar animation ----------------------------------------------------
 @import "compass/css3/transition";
-.face, .navigation-list {
+nav {
     opacity: 0.6;
     @media (max-width: $small-screen) {
         opacity: 1.0;
     }
-}
-.face, .navigation-list {
     @include transition-property(opacity);
     @include transition-duration(0.5s);
     @include transition-timing-function(ease);
