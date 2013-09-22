@@ -10,7 +10,7 @@ cabal-dev
 _cache
 _site
 site
-hakyll
+#hakyll
 generate-site
 
 # compiled CSS
