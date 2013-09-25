@@ -136,7 +136,7 @@ nav {
 
 @import "compass/layout/sticky-footer";
 @include sticky-footer(12em, ".wrapper", ".push", "footer");
-.row {
+.content {
     @media (max-width: $small-screen) {
         @include grid-column(12);
         padding-top: 0em;
@@ -164,7 +164,7 @@ figcaption {
 // footer text ----------------------------------------------------------
 footer {
     padding-top: 4em;
-    background-image: url("../static/img/back_pattern.png");
+    background-image: url("../img/back_pattern.png");
 
     p {
         text-align: center;
@@ -176,9 +176,9 @@ footer {
 // backgrounds ----------------------------------------------------------
 body {
     // border-top: $side-nav-divider-color $side-nav-divider-style 1em;
-    // background-image: url("../static/img/xv.png");
-    // background-image: url("../static/img/whitediamond.png");
-    // background-image: url("../static/img/diamond_upholstery.png");
+    // background-image: url("../img/xv.png");
+    // background-image: url("../img/whitediamond.png");
+    // background-image: url("../img/diamond_upholstery.png");
 }
 
 // sidebar --------------------------------------------------------------
