@@ -23,14 +23,16 @@ $base-font-size: $em-base;
     src: local('Fira Sans OT Regular'), local('Fira Sans OT'), url('../fonts/FiraSans-Regular.woff') format('woff');
 }
 @font-face {
-    font-family:'Fira Sans Bold';
-    src:url('../fonts/FiraSans-Regular.eot');
+    font-family:'Fira Sans';
+    src:url('../fonts/FiraSans-Bold.eot');
     src: local('Fira Sans OT Bold'), url('../fonts/FiraSans-Bold.woff') format('woff');
+    font-weight: bold;
 }
 @font-face {
-    font-family:'Fira Sans Italic';
+    font-family:'Fira Sans';
     src:url('../fonts/FiraSans-RegularItalic.eot');
     src: local('Fira Sans OT Italic'), url('../fonts/FiraSans-RegularItalic.woff') format('woff');
+    font-style: italic;
 }
 
 
