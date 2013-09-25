@@ -15,12 +15,29 @@
 $em-base: 16px;
 $base-font-size: $em-base;
 
-@import url(http://fonts.googleapis.com/css?family=Lato:700|Arvo:400,700,400italic,700italic);
+@import url(http://fonts.googleapis.com/css?family=Lato:700,700italic);
+
+@font-face {
+    font-family:'Fira Sans';
+    src:url('../fonts/FiraSans-Regular.eot');
+    src: local('Fira Sans OT Regular'), local('Fira Sans OT'), url('../fonts/FiraSans-Regular.woff') format('woff');
+}
+@font-face {
+    font-family:'Fira Sans Bold';
+    src:url('../fonts/FiraSans-Regular.eot');
+    src: local('Fira Sans OT Bold'), url('../fonts/FiraSans-Bold.woff') format('woff');
+}
+@font-face {
+    font-family:'Fira Sans Italic';
+    src:url('../fonts/FiraSans-RegularItalic.eot');
+    src: local('Fira Sans OT Italic'), url('../fonts/FiraSans-RegularItalic.woff') format('woff');
+}
+
 
 // We use these to control various global styles
 // $body-bg: #fff;
 // $body-font-color: #222;
-$body-font-family: "Arvo", Helvetica, Arial, sans-serif;
+$body-font-family: "FF Meta Web Pro", "Fira Sans", "Droid Sans", "Myriad Pro", sans-serif;
 // $body-font-family: sans-serif;
 // $body-font-weight: normal;
 // $body-font-style: normal;
