@@ -11,7 +11,7 @@ than none, as a rule[^CAs]. Even for websites without authentication,
 such as this one. Esteemed software blogger Jeff Atwood weighs in on the
 issue too, asking "[Should All Web Traffic Be Encrypted?][]"[^ch].
 
-![Requisite meme.](/images/encrypt-all-the-things.png)
+![Requisite meme.](/static/img/encrypt-all-the-things.png)
 
 I reckon (in a totally subjective manner) that there's also a certain
 element of credibility conferred by that padlock next to your URL -
@@ -83,7 +83,7 @@ Gandi. If you choose the DNS record method, then don't be surprised if
 verification takes a few hours - I left the process for a day, then came
 back to it once everything had propagated.
 
-![You've unlocked Gandi.net's certification badge. Wow, this site must be secure!](https://www.gandi.net/static/images/ssl/GANDI_SSL_logo_B_std_en.png)
+![You've unlocked Gandi.net's certification badge. Wow, this site must be secure!](https://www.gandi.net/static/static/img/ssl/GANDI_SSL_logo_B_std_en.png)
 
 Once this is done, you can download your newly CA-signed certificate (and
 rename it to `benjeffrey.com.crt` in the process).

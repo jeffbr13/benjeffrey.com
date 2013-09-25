@@ -27,16 +27,16 @@ main = hakyllWith config $ do
     match "templates/*" $ compile templateCompiler
 
     -- copy site icon to `favicon.ico`
-    match "images/favicon.ico" $ do
+    match "static/favicon.ico" $ do
         route   (constRoute "favicon.ico")
         compile copyFileCompiler
 
-    match "images/*" $ do
+    match "static/*/*" $ do
         route   idRoute
         compile copyFileCompiler
 
     match "scss/app.scss" $do
-        route   $ gsubRoute "scss/" (const "css/") `composeRoutes` setExtension "css"
+        route   $ gsubRoute "scss/" (const "static/css/") `composeRoutes` setExtension "css"
         compile $ getResourceString
             >>= withItemBody (unixFilter "sass" ["-s", "--scss", "--compass", "--style", "compressed"])
             >>= return . fmap compressCss

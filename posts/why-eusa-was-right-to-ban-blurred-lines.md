@@ -26,7 +26,7 @@ Did EUSA overexert their powers in this situation? I would say not.
 
 Talk about a proportional and effective response! At the very least they deserve an internet meme for all that:
 
-![BANS OVERPLAYED POP SONG. SPARKS INTERNATIONAL DEBATE ON MISOGYNY.](/images/success-kid-blurred-lines-ban.png)
+![BANS OVERPLAYED POP SONG. SPARKS INTERNATIONAL DEBATE ON MISOGYNY.](/static/img/success-kid-blurred-lines-ban.png)
 
 At the end of the day, what did EUSA actually do?
 
