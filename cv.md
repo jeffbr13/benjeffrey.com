@@ -48,11 +48,11 @@ Familiar with:
 Education
 ---------
 
-## [University of Edinburgh](http://www.ed.ac.uk)
+### [University of Edinburgh](http://www.ed.ac.uk)
 
 Currently studying for a [Masters of Informatics (MInf) degree][minf], due to graduate in 2017.
 
-### Informatics Courses
+#### Informatics Courses
 
 - [Functional Programming](http://www.inf.ed.ac.uk/teaching/courses/inf1-fp) with Haskell
 - [Object-Oriented Programming](http://www.inf.ed.ac.uk/teaching/courses/inf1-op) with Java (wrote a game, team won "teamwork" prize)
