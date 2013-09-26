@@ -1,12 +1,26 @@
 benjeffrey.com
 ==============
 
-Ben Jeffrey's homepage on the interwebs.
+## Requirements
 
+- GHC
+- Hakyll
+- [Compass](http://compass-style.org/) for Zurb Foundation
 
-Requirements
-------------
+### On Mac OS X:
 
-* GHC
-* Hakyll
-* [Compass](http://compass-style.org/) for compiling SCSS.
+```sh
+brew install ghc rbenv ruby-build
+cabal update
+cabal install hakyll
+gem install compass zurb-foundation
+ghc --make site.hs
+```
+
+## Commands
+
+```sh
+./site build
+./site rebuild
+./site deploy
+```
