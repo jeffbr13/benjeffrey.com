@@ -31,6 +31,11 @@ main = hakyllWith config $ do
         route   (constRoute "favicon.ico")
         compile copyFileCompiler
 
+    -- public GPG key
+    match "static/mail@benjeffrey.com.asc" $ do
+        route   (constRoute "mail@benjeffrey.com.asc")
+        compile copyFileCompiler
+
     match "static/*/*" $ do
         route   idRoute
         compile copyFileCompiler

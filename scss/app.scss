@@ -92,6 +92,9 @@ nav {
         text-decoration: none;
     }
 }
+.navigation-list>ul>li>a {
+    display: inline !important;
+}
 
 @import "compass/layout/sticky-footer";
 @include sticky-footer(12em, ".wrapper", ".push", "footer");

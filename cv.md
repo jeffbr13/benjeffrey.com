@@ -10,7 +10,7 @@ description: Where Ben Jeffrey has been, and what he's done.
       <li class="locality">Edinburgh</li>
       <li class="country-name">United Kingdom</li>
       <li class="tel">07974607509</li>
-      <li><a href="mailto:mail@benjeffrey.net" class="email">mail@benjeffrey.net</a></li>
+      <li><a href="mailto:mail@benjeffrey.com" class="email">mail@benjeffrey.net</a></li>
       <li><a class="url" href="http://benjeffrey.com">http://benjeffrey.com</a></li>
     </ul>
 </aside>
