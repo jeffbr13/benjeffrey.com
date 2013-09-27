@@ -11,7 +11,7 @@ description: Where Ben Jeffrey has been, and what he's done.
       <li class="country-name">United Kingdom</li>
       <li class="tel">07974607509</li>
       <li><a href="mailto:mail@benjeffrey.com" class="email">mail@benjeffrey.com</a></li>
-      <li><a class="url" href="http://benjeffrey.com">http://benjeffrey.com</a></li>
+      <li><a class="url" href="https://benjeffrey.com">benjeffrey.com</a></li>
     </ul>
 </aside>
 
