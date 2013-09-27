@@ -20,6 +20,8 @@ cite {
     display: block;
     text-align: right;
 }
+a, a:visited { text-decoration: underline;}
+a[href]:after { content: ""; }
 .blog-description {
     font-size: 90%;
 }
