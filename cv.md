@@ -20,7 +20,7 @@ Education
 
 ### [University of Edinburgh](http://www.ed.ac.uk)
 
-Currently studying for a [Masters of Informatics (MInf) degree][minf], due to graduate in 2017.
+Currently studying for a [Masters of Informatics (MInf.)][minf], and due to graduate in 2017.
 
 #### Informatics Courses
 
