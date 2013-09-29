@@ -259,8 +259,8 @@ $code-font-weight: normal;
 // $anchor-font-color: $primary-color;
 // $anchor-font-color-hover: darken($primary-color, 5%);
 $anchor-text-decoration: underline;
-$anchor-font-color: $body-font-color;
-$anchor-font-color-hover: lighten($body-font-color, 15%);
+$anchor-font-color: $primary-color;
+$anchor-font-color-hover: lighten($primary-color, 15%);
 
 
 // Style the <hr> element
