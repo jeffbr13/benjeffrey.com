@@ -36,6 +36,10 @@ main = hakyllWith config $ do
         route   (constRoute "mail@benjeffrey.com.asc")
         compile copyFileCompiler
 
+    match "static/vCard.vcf" $ do
+        route   (constRoute "vCard.vcf")
+        compile copyFileCompiler
+
     match "static/*/*" $ do
         route   idRoute
         compile copyFileCompiler
