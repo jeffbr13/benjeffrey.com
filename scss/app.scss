@@ -93,8 +93,9 @@ nav {
 }
 .name, .username {
     a {
-        text-decoration: none;
         color: $header-font-color;
+        font-family: $header-font-family;
+        text-decoration: none;
     }
 }
 .navigation-list>ul>li>a {
