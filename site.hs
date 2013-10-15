@@ -60,14 +60,14 @@ main = hakyllWith config $ do
         route   $ setExtension ""
         compile $ pandocCompilerWith defaultHakyllReaderOptions pandocWriterOptions
             >>= loadAndApplyTemplate "templates/generic.html" defaultContext
-            >>= loadAndApplyTemplate "templates/default.html" defaultContext
+            >>= loadAndApplyTemplate "templates/base.html" defaultContext
             >>= relativizeUrls
 
     match "posts/*" $ do
         route $ setExtension ""
         compile $ pandocCompilerWith defaultHakyllReaderOptions pandocWriterOptions
             >>= loadAndApplyTemplate "templates/post.html"    postCtx
-            >>= loadAndApplyTemplate "templates/default.html" postCtx
+            >>= loadAndApplyTemplate "templates/base.html" postCtx
             >>= relativizeUrls
 
     create ["archive"] $ do
@@ -80,7 +80,7 @@ main = hakyllWith config $ do
                     defaultContext
             makeItem ""
                 >>= loadAndApplyTemplate "templates/archive.html" archiveCtx
-                >>= loadAndApplyTemplate "templates/default.html" archiveCtx
+                >>= loadAndApplyTemplate "templates/base.html" archiveCtx
                 >>= relativizeUrls
 
 
@@ -92,7 +92,7 @@ main = hakyllWith config $ do
 
             getResourceBody
                 >>= applyAsTemplate indexCtx
-                >>= loadAndApplyTemplate "templates/default.html" postCtx
+                >>= loadAndApplyTemplate "templates/base.html" postCtx
                 >>= relativizeUrls
 
 
