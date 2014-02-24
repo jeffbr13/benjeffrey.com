@@ -36,32 +36,6 @@ Currently studying for a [Masters of Informatics (MInf.)][minf] and due to gradu
 Employment
 ----------
 
-### Data Acquisition Intern, [Skyscanner](http://skyscanner.net) (Summer 2013)
-
-I worked with a team of other interns, maintaining and growing Skyscanner's
-large collection of international airline scrapers, written in Python.
-Duties included maintaining and updating database records, as well as
-interfacing with airline counterparts in resolving issues with APIs or
-webscrapers.
-
-Variety of teas provided, excellent coffee from the company barista machine!
-
-### Telephone Interviewer, [Ipsos Mori Scotland](http://www.ipsos-mori.com/offices/scotland.aspx) (Winter 2012-2013)
-
-Collecting survey data over the telephone, from participant feedback on
-government programs to the monthly political thermometer. Brought my own
-cuppas in a thermos.
-
-### Waiter, [Fratello's Restaurant Scotch Corner](http://www.fratellosscotchcorner.co.uk/) (Summer 2012)
-
-Bussing tables, manning the bar, serving banquets. Not much time for tea.
-
-### Junior Javascript Developer, [Accendo Design](http://www.accendodesign.com/) (July-August 2011)
-
-Three weeks of work experience, given the Rhino book to learn Javascript
-on the job, and wrote some webform validation code for a real-estate management
-startup. First tastes of many strange and exotic teas.
-
 ### Office Assistant, [Anarkik3D](http://www.anarkik3d.co.uk/) (June 2011)
 
 One week of work experience, which included
@@ -71,29 +45,89 @@ neatening up webpages, brewing the tea, and other essential
 office-work.
 
 
-Projects
---------
+### Junior Javascript Developer, [Accendo Design](http://www.accendodesign.com/) (July → August 2011)
 
-See [my GitHub page](https://github.com/jeffbr13?tab=repositories).
+Three weeks of work experience, given the Rhino book to learn Javascript
+on the job, and wrote some webform validation code for a real-estate management
+startup. First tastes of many strange and exotic teas.
 
-Hackathons
-----------
+
+### Waiter, [Fratello's Restaurant Scotch Corner](http://www.fratellosscotchcorner.co.uk/) (Summer 2012)
+
+Bussing tables, manning the bar, serving banquets. Not much time for tea.
+
+Variety of teas provided, excellent coffee from the company barista machine!
+
+
+### Telephone Interviewer, [Ipsos Mori Scotland](http://www.ipsos-mori.com/offices/scotland.aspx) (December 2012 → January 2013)
+
+Collecting survey data over the telephone, from participant feedback on
+government programs to the monthly political thermometer. Brought my own
+cuppas in a thermos.
+
+
+### Data Acquisition Intern, [Skyscanner](http://skyscanner.net) (Summer 2013)
+
+I worked with a team of other interns, maintaining and growing Skyscanner's
+large collection of international airline scrapers, written in Python.
+Duties included maintaining and updating database records, as well as
+interfacing with airline counterparts in resolving issues with APIs or
+webscrapers.
+
+
+### Co-founder, [Pitchpatch/ptchd](http://www.ptchd.com) (Summer 2013)
+
+My co-founder [Caroline Nguyen](http://about.me/caroline.nguyen) and I managed to win one of
+[Jisc](http://jisc.ac.uk/)'s £5,000 [Summer of Student Innovation](http://jisc.ac.uk/student-innovation) grants,
+giving us the runway needed to pursue a project we'd both been working on since a Startup Weekend in 2012.
+
+We successfully built and demonstrated a prototype "skills-marketplace" for university campuses,
+and were offered a further £10,000 of funding from Jisc.
+
+Unfortunately the project was taking a toll on my other work, and so I parted ways with my co-founder in order to focus
+on school and my part-time work at Skyscanner.
+
+
+### Data Acquisition Software Engineer, [Skyscanner](http://skyscanner.net) (October 2013 → present)
+
+I've continued my work at Skyscanner on a part-time basis since October.
+
+
+
+Projects and Volunteering
+-------------------------
+
+To see what I'm working on right now, check out [my GitHub page](https://github.com/jeffbr13?tab=repositories).
+
+I'm a member of the [Open Knowledge Foundation](http://scot.okfn.org/),
+and I've been involved with Open Data efforts in and around the University of Edinburgh.
+
+
+### Hackathons
 
 I've contributed time and code at:
 
 * Startup Weekend
 * Day-of-Code Retreat
-* University of Edinburgh ILWHack (team won "Best Data Mashup" category)
+* University of Edinburgh ILWHack (team won "Best Data Mashup" category, 2013)
 * NHS Hack Scotland
+
+
+### Projects
+
+- [Social Sounds Project](http://www.socialsoundsproject), a map of sounds around Edinburgh and Scotland,
+    built for the Anthropology department at the University of Edinburgh
+
 
 Skills
 ------
+
 ### Languages
 
 - Python
 - Java
 - JavaScript/Coffeescript
-- CSS/Sass/Less
+- CSS/Sass
 - Haskell
 - Golang
 - SQL
@@ -105,14 +139,10 @@ Skills
 - [Hakyll][] for static blogs and websites
 - Nginx and Apache for static hosting
 
-### Software Engineering Creds
+### other
 
-Familiar with:
-
-- Lean and Agile practices
-- Git/Mercurial/Subversion workflows
-- basic Linux server configuration
-- have attempted running Arch Linux as primary OS (i.e. "tenacity" :-)
+- familiar with Lean and Agile team-practices
+- experienced Linux user
 
 <!-- links -->
 
