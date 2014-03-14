@@ -1,0 +1,11 @@
+@import "syntax-highlighting-solarized-light";
+
+pre {
+    margin-bottom: 1em;
+    padding: 1em;
+
+    overflow: auto;
+    // overflow-x: scroll;
+    // white-space: pre-wrap;
+    // background-color: rgba(218,218,218, 0.4)
+}
