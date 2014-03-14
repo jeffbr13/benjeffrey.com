@@ -60,34 +60,16 @@ $em-base: 16px !default;
 // $experimental: true;
 
 // Various global styles
-
 $default-float: left;
 
-@import url(https://fonts.googleapis.com/css?family=Lato:700,700italic);
+@import url(http://fonts.googleapis.com/css?family=Lato:700|Merriweather:400,400italic,700|Source+Code+Pro);
 
-@font-face {
-    font-family:'Fira Sans';
-    src:url('../fonts/FiraSans-Regular.eot');
-    src: local('Fira Sans OT Regular'), local('Fira Sans OT'), url('../fonts/FiraSans-Regular.woff') format('woff');
-}
-@font-face {
-    font-family:'Fira Sans';
-    src:url('../fonts/FiraSans-Bold.eot');
-    src: local('Fira Sans OT Bold'), url('../fonts/FiraSans-Bold.woff') format('woff');
-    font-weight: bold;
-}
-@font-face {
-    font-family:'Fira Sans';
-    src:url('../fonts/FiraSans-RegularItalic.eot');
-    src: local('Fira Sans OT Italic'), url('../fonts/FiraSans-RegularItalic.woff') format('woff');
-    font-style: italic;
-}
 
 
 // $body-bg: #fff;
 $body-font-color: #222;
 // $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-$body-font-family: "FF Meta Web Pro", "Fira Sans", "Droid Sans", "Myriad Pro", sans-serif;
+$body-font-family: "Merriweather", "Roboto Slab", "Droid Serif", serif;
 // $body-font-weight: normal;
 // $body-font-style: normal;
 
@@ -205,15 +187,15 @@ $header-font-family: "Lato", "Droid Sans", sans-serif;
 // $header-font-color: #222;
 // $header-line-height: 1.4;
 // $header-top-margin: .2em;
-$header-line-height: 1.1;
-$header-top-margin: 1em;
+// $header-line-height: 1.1;
+// $header-top-margin: 1em;
 // $header-bottom-margin: .5em;
 // $header-text-rendering: optimizeLegibility;
 
 // Control header font sizes
 
-$h1-font-size: 3.875em;
 // $h1-font-size: em-calc(44);
+$h1-font-size: em-calc(64);
 // $h2-font-size: em-calc(37);
 // $h3-font-size: em-calc(27);
 // $h4-font-size: em-calc(23);
@@ -230,7 +212,7 @@ $h1-font-size: 3.875em;
 
 // A general <small> styling
 
-$small-font-size: 80%;
+// $small-font-size: 80%;
 // $small-font-color: lighten($header-font-color, 30%);
 
 // Style paragraphs
@@ -238,7 +220,9 @@ $small-font-size: 80%;
 // $paragraph-font-family: inherit;
 // $paragraph-font-weight: normal;
 // $paragraph-font-size: 1em;
+$paragraph-font-size: em-calc(15);
 // $paragraph-line-height: 1.6;
+$paragraph-line-height: em-calc(28);
 // $paragraph-margin-bottom: em-calc(20);
 // $paragraph-aside-font-size: em-calc(14);
 // $paragraph-aside-line-height: 1.35;
@@ -250,6 +234,7 @@ $small-font-size: 80%;
 // $code-color: darken($alert-color, 15%);
 $code-color: darken($tertiary-color, 20%);
 // $code-font-family: Consolas, 'Liberation Mono', Courier, monospace;
+$code-font-family: 'Source Code Pro', Consolas, 'DejaVu Sans Mono', monospace;
 // $code-font-weight: bold;
 $code-font-weight: normal;
 
@@ -258,9 +243,6 @@ $code-font-weight: normal;
 // $anchor-text-decoration: none;
 // $anchor-font-color: $primary-color;
 // $anchor-font-color-hover: darken($primary-color, 5%);
-$anchor-text-decoration: underline;
-$anchor-font-color: $primary-color;
-$anchor-font-color-hover: lighten($primary-color, 15%);
 
 
 // Style the <hr> element

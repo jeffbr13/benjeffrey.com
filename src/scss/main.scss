@@ -8,17 +8,9 @@
 // Typography:
 //------------
 
-p {
-    text-align: justify;
-}
-
 cite {
     display: block;
     text-align: right;
-}
-
-a {
-    text-decoration: underline;
 }
 
 .blog-description {
@@ -29,10 +21,6 @@ h1, h2, h3, h4, h5 {
     a {
         color: inherit;
         text-decoration: none;
-
-        &:hover, &:focus {
-            color: lighten($header-font-color, 10%);
-        }
     }
 }
 
