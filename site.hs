@@ -45,21 +45,18 @@ main = hakyllWith config $ do
             >>= relativizeUrls
 
 
-
     -- build index page:
     match "content/index.html" $ do
         route (gsubRoute "content/" (const ""))
         compile $ do
-            let indexCtx = field "posts" $ \_ ->
-                                postList $ fmap (take 3) . recentFirst
-
+            let indexCtx = field "posts" (\_ -> postList recentFirst)
             getResourceBody
                 >>= applyAsTemplate indexCtx
                 >>= loadAndApplyTemplate "templates/base.html" postCtx
                 >>= relativizeUrls
 
 
-    -- copy all other site content:
+    -- copy other site content:
     match "content/**" $ do
         route (gsubRoute "content/" (const ""))
         compile copyFileCompiler
@@ -67,24 +64,10 @@ main = hakyllWith config $ do
 
     -- compile SCSS:
     match "scss/app.scss" $do
-        route   $ constRoute "css"  -- gsubRoute "scss/" (const "css/") `composeRoutes` setExtension "css"
+        route   $ constRoute "css"
         compile $ getResourceString
             >>= withItemBody (unixFilter "sass" ["-s", "--scss", "--compass", "--style", "compressed"])
             >>= return . fmap compressCss
-
-
-    create ["archive"] $ do
-        route idRoute
-        compile $ do
-            let archiveCtx =
-                    field "posts" (\_ -> postList recentFirst)          `mappend`
-                    constField "title" "Posts archive"                   `mappend`
-                    constField "description" "Previous posts on benjeffrey.com"  `mappend`
-                    defaultContext
-            makeItem ""
-                >>= loadAndApplyTemplate "templates/archive.html" archiveCtx
-                >>= loadAndApplyTemplate "templates/base.html" archiveCtx
-                >>= relativizeUrls
 
 
 --------------------------------------------------------------------------------
@@ -97,7 +80,7 @@ postCtx =
 --------------------------------------------------------------------------------
 postList :: ([Item String] -> Compiler [Item String]) -> Compiler String
 postList sortFilter = do
-    posts   <- sortFilter =<< loadAll "posts/*"
+    posts   <- sortFilter =<< loadAll "content/posts/*"
     itemTpl <- loadBody "templates/post-item.html"
     list    <- applyTemplateList itemTpl postCtx posts
     return list
