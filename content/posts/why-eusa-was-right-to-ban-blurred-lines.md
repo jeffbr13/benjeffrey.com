@@ -26,13 +26,13 @@ Did EUSA overexert their powers in this situation? I would say not.
 
 Talk about a proportional and effective response! At the very least they deserve an internet meme for all that:
 
-![BANS OVERPLAYED POP SONG. SPARKS INTERNATIONAL DEBATE ON MISOGYNY.](/static/img/success-kid-blurred-lines-ban.png)
+![BANS OVERPLAYED POP SONG. SPARKS INTERNATIONAL DEBATE ON MISOGYNY.](../images/success-kid-blurred-lines-ban.png)
 
 At the end of the day, what did EUSA actually do?
 
 They did not 'ban' or 'censor' the track on campus, in any literal or meaningful sense; EUSA operates (owns?) the venues where the track is no longer allowed to be played. Without stepping on anybody's rights, it is perfectly entitled to choose it's songs or [refuse to sell products][page 3 ban] as it sees fit[^1].
 
-And yes, if EUSA did follow it's zero-tolerance policy to it's logical conclusion then they'd have to stop playing a whole bunch of other songs, too. But banning songs isn't the point! I don't believe that (all) the folks at EUSA want to play moral arbiter and make people suffer by dictating what they can/can't listen to. They could have done that much more effectively by following their principle to the letter,  actually banning a significant portion of modern recordings, and making their venues irrelevant in the process. But they're no Chairman Mao. This wasn't meant to be cultural revolution, it was *targeted assassination*. 
+And yes, if EUSA did follow it's zero-tolerance policy to it's logical conclusion then they'd have to stop playing a whole bunch of other songs, too. But banning songs isn't the point! I don't believe that (all) the folks at EUSA want to play moral arbiter and make people suffer by dictating what they can/can't listen to. They could have done that much more effectively by following their principle to the letter,  actually banning a significant portion of modern recordings, and making their venues irrelevant in the process. But they're no Chairman Mao. This wasn't meant to be cultural revolution, it was *targeted assassination*.
 
 **EUSA have banned a popular (but fading) track so that we have this debate in the first place.** After all, if you still want to hear Blurred Lines in a club, there are plenty of venues in Edinburgh which will happily play radio-music for you every night of the week[^2].
 

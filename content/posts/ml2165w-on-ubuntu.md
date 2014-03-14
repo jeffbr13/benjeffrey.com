@@ -61,7 +61,7 @@ Printer](http://en.wikipedia.org/wiki/Line_Printer_Daemon_protocol)** --
 apparently [some Samsung printer/driver combinations can be buggy over
 IPP](http://www.bchemnet.com/suldr/forum/index.php?topic=87.0#msg_361).
 
-![Ensure you add the printer using the LPD protocol.](/static/img/screenshot-add-printer-over-lpd.png)
+![Ensure you add the printer using the LPD protocol.](../images/screenshot-add-printer-over-lpd.png)
 
 The ML-2165W should then detected as an ML-2160-series printer, after
 searching for drivers.
@@ -80,7 +80,7 @@ The text file itself never printed, in my case:
 lp -d {printer} {text file}
 ```
 
-![Yay, it works! And yes it is past my bedtime.](/static/img/ml-2165-cups-test-page.jpg)
+![Yay, it works! And yes it is past my bedtime.](../images/ml-2165-cups-test-page.jpg)
 
 Once the printer is fully configured, you should be able to print a CUPS
 test-page, as above!

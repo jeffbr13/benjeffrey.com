@@ -11,7 +11,7 @@ than none, as a rule[^CAs]. Even for websites without authentication,
 such as this one. Esteemed software blogger Jeff Atwood weighs in on the
 issue too, asking "[Should All Web Traffic Be Encrypted?][]"[^ch].
 
-![Requisite meme.](/static/img/encrypt-all-the-things.png)
+![Requisite meme.](../images/encrypt-all-the-things.png)
 
 I reckon (in a totally subjective manner) that there's also a certain
 element of credibility conferred by that padlock next to your URL -
