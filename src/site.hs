@@ -8,7 +8,7 @@ import qualified Text.Pandoc.Options as Pandoc.Options
 --------------------------------------------------------------------------------
 config :: Configuration
 config = defaultConfiguration
-        {   deployCommand = "./deploy.sh"}
+        {   deployCommand = "src/deploy.sh"}
 
 pandocWriterOptions :: Pandoc.Options.WriterOptions
 pandocWriterOptions = defaultHakyllWriterOptions
