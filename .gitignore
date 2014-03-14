@@ -6,12 +6,13 @@ cabal-dev
 *.chs.h
 .virthualenv
 
-# compiled site (Hakyll)
+# site compilation caches (Hakyll/Sass):
 _cache
 _site
 site
 hakyll
 generate-site
+src/.sass-cache
 
 # compiled CSS
 css
