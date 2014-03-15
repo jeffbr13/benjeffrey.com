@@ -64,7 +64,7 @@ main = hakyllWith config $ do
 
     -- compile SCSS:
     match "src/scss/main.scss" $do
-        route   $ constRoute "css"
+        route   $ constRoute "stylesheet.css"
         compile $ getResourceString
             >>= withItemBody (unixFilter "sass" ["-s",
                                                  "--scss",
