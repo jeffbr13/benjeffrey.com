@@ -20,7 +20,8 @@ ghc --make site.hs
 ## Commands
 
 ```sh
-./site build
-./site rebuild
-./site deploy
+ghc --make src/site.hs && src/site rebuild      # recompile executable and rebuild site
+src/site build          # build changed parts of the site
+src/site rebuild        # delete site and rebuild
+src/site deploy         # run src/deploy.sh
 ```
