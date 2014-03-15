@@ -1,6 +1,6 @@
 ---
 title: Jane Street Interview Reparations
-description: I brainfarted during a programming telephone interview. These are the programs I should have wrote.
+description: I messed up in a coding exercise. So here, have a functional Queue implementation in Haskell.
 date: 2013-10-18
 ---
 
