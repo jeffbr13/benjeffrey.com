@@ -1,5 +1,5 @@
 -----
-title: The ML-2165W on Ubuntu Raring
+title: Samsung ML-2165W Printer on Ubuntu Raring
 description: Setting up the Samsung ML-2165W wireless monochrome laser printer on Ubuntu 13.04
 date: 2013-05-08
 -----
