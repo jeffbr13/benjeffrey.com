@@ -13,10 +13,6 @@ cite {
     text-align: right;
 }
 
-.blog-description {
-    font-size: 90%;
-}
-
 h1, h2, h3, h4, h5 {
     a {
         color: inherit;
@@ -28,33 +24,13 @@ p {
     max-width: 40em;
 }
 
-// posts -----------------------------------------------------------------------
-.post-title {
-    font-weight: bold;
-}
-
-.post-info {
-    @include grid-row(nest);
-    margin-bottom: 2em;
-
-    font-size: 80%;
-
-    .ancestors {
-        @include grid-column(4);
-        a {
-            padding-right: 0.5em;
-        }
+article {
+    .post-info {
+        margin-bottom: 2em;
     }
 
     .date {
-        @include grid-column(8, true);
-        text-align: right;
+        text-align: center;
         color: $tertiary-color;
-        &:before {
-            content: "[modified "
-        }
-        &:after {
-            content: "]"
-        }
     }
 }
