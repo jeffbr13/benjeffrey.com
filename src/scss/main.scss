@@ -25,12 +25,14 @@ p {
 }
 
 article {
-    .post-info {
-        margin-bottom: 2em;
+
+    .meta {
+        .description {
+            margin-bottom: 1em;
+        }
+        .date {
+            color: $tertiary-color;
+        }
     }
 
-    .date {
-        text-align: center;
-        color: $tertiary-color;
-    }
 }

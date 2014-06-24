@@ -85,6 +85,6 @@ postCtx =
 postList :: ([Item String] -> Compiler [Item String]) -> Compiler String
 postList sortFilter = do
     posts   <- sortFilter =<< loadAll "content/posts/*"
-    itemTpl <- loadBody "templates/post-item.html"
+    itemTpl <- loadBody "templates/post-list-item.html"
     list    <- applyTemplateList itemTpl postCtx posts
     return list
