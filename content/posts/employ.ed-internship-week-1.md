@@ -1,5 +1,5 @@
 ---
-title: Employ.ed Internship: week one
+title: Employ.ed Internship Week 1: BHAGs and Groupthink
 date: 2014-06-06
 ---
 
@@ -21,7 +21,12 @@ I've spent most of my time this week in my new corner desk getting set up with t
 
 These smaller summer projects are all about letting the school IT team integrate and build on the data from other systems/departments across the university, rather than replicating data (and the effort of maintaining and synchronising it).
 
-## My Go-To BHAG
+## BHAGs
+
+> "A true BHAG is clear and compelling, serves as unifying focal point of effort, and acts as a clear catalyst for team spirit. It has a clear finish line, so the organization can know when it has achieved the goal; people like to shoot for finish lines."
+> <cite>Collins and Porras, Built to Last: Successful Habits of Visionary Companies</cite>
+
+### Personal
 
 My Big Hairy Audacious Goal for this internship is to be able to build some sort of MVP demonstrating the power and usefulness of integrating data from the original sources, instead of replicating it across departments. For example, an application for engineering <acronym title="Personal Tutor">PT</acronym> to pull up all their information on a tutee -- accessing
 
@@ -29,7 +34,7 @@ My Big Hairy Audacious Goal for this internship is to be able to build some sort
 - Euclid for enrolment, and
 - T@Ed for timetables.
 
-## Groupthink
+### Team
 
 Meanwhile, Eng-IT's stretch goal for the summer is to build an abstraction layer atop the university's various group authorisation systems, bundling them *all* up into one interface for
 
@@ -38,7 +43,7 @@ Meanwhile, Eng-IT's stretch goal for the summer is to build an abstraction layer
 - student/teacher enrolment,
 - etc.
 
-All this is happening under the codename "Groupthink".
+All this is happening under the codename *Groupthink*.
 
 My projects may or may not contribute to this as the summer proceeds, but I will certainly find it useful over the course of my work here, if it gets completed before my eight weeks are up!
 
