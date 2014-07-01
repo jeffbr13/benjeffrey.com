@@ -8,6 +8,30 @@
 // Typography:
 //------------
 
+@font-face {
+    font-family: 'Aleo';
+    src: url('/fonts/Aleo-Bold-webfont.eot');
+    src: url('/fonts/Aleo-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/Aleo-Bold-webfont.woff') format('woff'),
+         url('/fonts/Aleo-Bold-webfont.ttf') format('truetype'),
+         url('/fonts/Aleo-Bold-webfont.svg#aleobold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Aleo';
+    src: url('/fonts/Aleo-Regular-webfont.eot');
+    src: url('/fonts/Aleo-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/Aleo-Regular-webfont.woff') format('woff'),
+         url('/fonts/Aleo-Regular-webfont.ttf') format('truetype'),
+         url('/fonts/Aleo-Regular-webfont.svg#aleoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 cite {
     display: block;
     text-align: right;
@@ -20,14 +44,11 @@ h1, h2, h3, h4, h5 {
     }
 }
 
-p {
-    max-width: 40em;
-}
-
 article {
 
     h1, h2, h3, h4, h5, h6 {
         text-decoration: underline;
+        font-weight: normal;
     }
 
     .meta {

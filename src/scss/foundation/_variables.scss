@@ -62,15 +62,15 @@ $em-base: 16px !default;
 // Various global styles
 $default-float: left;
 
-@import url(https://fonts.googleapis.com/css?family=Lato:700|Merriweather:400,400italic,700|Source+Code+Pro);
+@import url(https://fonts.googleapis.com/css?family=Merriweather:300,300italic,700|Source+Code+Pro);
 
 
 
 // $body-bg: #fff;
 $body-font-color: #222;
 // $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-$body-font-family: "Merriweather", "Roboto Slab", "Droid Serif", serif;
-// $body-font-weight: normal;
+$body-font-family: "Merriweather", "DejaVu Sans", "Droid Serif", serif;
+$body-font-weight: 300;
 // $body-font-style: normal;
 
 // Font-smoothing
