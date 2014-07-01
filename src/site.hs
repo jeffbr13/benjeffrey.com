@@ -20,6 +20,7 @@ pandocWriterOptions = defaultHakyllWriterOptions
                         , Pandoc.Options.writerTableOfContents = True
                     }
 
+postsDirectory = "content/posts/**"
 --------------------------------------------------------------------------------
 main :: IO ()
 main = hakyllWith config $ do
@@ -37,7 +38,7 @@ main = hakyllWith config $ do
 
 
     -- compile posts:
-    match "content/posts/*" $ do
+    match postsDirectory $ do
         route $ setExtension "" `composeRoutes` gsubRoute "content/" (const "")
         compile $ pandocCompilerWith defaultHakyllReaderOptions pandocWriterOptions
             >>= loadAndApplyTemplate "templates/post.html"    postCtx
@@ -84,7 +85,7 @@ postCtx =
 --------------------------------------------------------------------------------
 postList :: ([Item String] -> Compiler [Item String]) -> Compiler String
 postList sortFilter = do
-    posts   <- sortFilter =<< loadAll "content/posts/*"
+    posts   <- sortFilter =<< loadAll postsDirectory
     itemTpl <- loadBody "templates/post-list-item.html"
     list    <- applyTemplateList itemTpl postCtx posts
     return list
