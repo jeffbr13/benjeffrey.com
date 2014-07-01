@@ -26,6 +26,10 @@ p {
 
 article {
 
+    h1, h2, h3, h4, h5, h6 {
+        text-decoration: underline;
+    }
+
     .meta {
         .description {
             margin-bottom: 1em;
