@@ -62,14 +62,13 @@ $em-base: 16px !default;
 // Various global styles
 $default-float: left;
 
-@import url(https://fonts.googleapis.com/css?family=Merriweather:300,300italic,700|Source+Code+Pro);
-
+@import url(https://fonts.googleapis.com/css?family=Merriweather:300,300italic,700|Exo+2:700,400|Source+Code+Pro);
 
 
 // $body-bg: #fff;
 $body-font-color: #222;
 // $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-$body-font-family: "Merriweather", "DejaVu Sans", "Droid Serif", serif;
+$body-font-family: "Merriweather", "DejaVu Sans", serif;
 $body-font-weight: 300;
 // $body-font-style: normal;
 
@@ -181,7 +180,7 @@ $quaternary-color: rgb(249,247,233);
 // Control header font styles
 
 // $header-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-$header-font-family: "Aleo", "Roboto Slab", serif;
+$header-font-family: "Aleo", "Bitter", "Roboto Slab", serif;
 // $header-font-weight: bold;
 // $header-font-style: normal;
 // $header-font-color: #222;
