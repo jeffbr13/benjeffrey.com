@@ -46,7 +46,6 @@ h1, h2, h3, h4, h5 {
 
 article {
     h1, h2, h3, h4, h5, h6 {
-        font-family: "Exo 2.0", "Lato";
         font-weight: normal;
         text-decoration: underline;
     }
@@ -62,5 +61,5 @@ article {
 }
 
 footer {
-    font-family: "Exo 2.0", "Lato";
+    font-family: $header-font-family;
 }
