@@ -16,6 +16,24 @@ description: Where Ben Jeffrey has been, and what he's done.
 </aside>
 
 
+Education
+---------
+
+### [University of Edinburgh](http://www.ed.ac.uk)
+
+Currently on a year out from studying for a [Masters of Informatics (MInf.)][minf] and due to graduate in 2017.
+
+#### Informatics Courses
+
+- [Functional Programming](http://www.inf.ed.ac.uk/teaching/courses/inf1-fp), Haskell
+- [Object-Oriented Programming](http://www.inf.ed.ac.uk/teaching/courses/inf1-op), Java (wrote a game, team won class "teamwork" prize)
+- [Cognitive Science](http://www.inf.ed.ac.uk/teaching/courses/inf1-cg), an introductory course
+- [Processing Formal and Natural Languages](http://www.inf.ed.ac.uk/teaching/courses/inf2a/)
+- [Computer Systems](http://www.inf.ed.ac.uk/teaching/courses/inf2c-cs/), MIPS and C
+- [Software Engineering](http://www.inf.ed.ac.uk/teaching/courses/inf2c-se/)
+- [Discrete Mathematics and Mathematical Reasoning](http://www.inf.ed.ac.uk/teaching/courses/dmmr/)
+
+
 Employment
 ----------
 
