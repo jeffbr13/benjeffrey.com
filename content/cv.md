@@ -135,6 +135,7 @@ Previous experience with
 - [Django][] for web applications
 - [Flask][] for back-ends and small applications
 - Nginx, Apache
+- [Docker](https://www.docker.com) containerisation, specicifically with [Docker Compose (previously Fig)](http://docs.docker.com/compose/).
 
 
 ### Miscellaneous Skills
