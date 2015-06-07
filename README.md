@@ -2,6 +2,7 @@ benjeffrey.com
 ==============
 
 ```sh
+gem install sass compass
 cabal update
 cabal sandbox init
 cabal install --only-dependencies
