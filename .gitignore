@@ -17,3 +17,6 @@ src/.sass-cache
 # compiled CSS
 css
 
+# Cabal
+cabal.sandbox.config
+.cabal-sandbox
