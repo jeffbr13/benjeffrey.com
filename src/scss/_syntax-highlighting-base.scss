@@ -1,6 +1,17 @@
 // taken from https://raw.github.com/jaspervdj/hakyll/master/web/css/syntax.css
 // These tokens are marked up in Pandoc by the `highlighting-kate` package
 
+code {
+  border: none;
+}
+
+pre {
+  code {
+    background-color: inherit;
+    border: inherit;
+  }
+}
+
 table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode, table.sourceCode pre {
     margin: 0;
     padding: 0;

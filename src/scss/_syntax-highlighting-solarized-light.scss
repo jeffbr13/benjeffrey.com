@@ -18,12 +18,12 @@ $blue:      #268BD2;
 $cyan:      #2AA198;
 $green:     #859900;
 
-pre {
+
+pre, code {
     background-color: $base3;
 }
 
 .sourceCode {
-
     // KeyWordTok
     .kw { color: $blue; }
     // DataTypeTok

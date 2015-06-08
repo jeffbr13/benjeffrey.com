@@ -11,31 +11,19 @@ $string: #FF410D;
 $number: #C7F026;
 $keyword: #748AA6;
 
-pre.sourceCode { background-color: $background; color: $foreground; }
 
-// KeyWordTok
-pre.sourceCode span.kw { color: $keyword; }
-// DataTypeTok
-// pre.sourceCode span.dt { color: ; }
-// DecValTok (Declaration/Value)
-// pre.sourceCode span.dv { color: ; }
-// BaseNTok
-pre.sourceCode span.bn { color: $number; }
-// FloatTok
-pre.sourceCode span.fl { color: $number; }
-// CharTok
-pre.sourceCode span.ch { color: $string; }
-// StringTok
-pre.sourceCode span.st { color: $string; }
-// CommentTok
-pre.sourceCode span.co { color: $comment; }
-// OtherTok
-pre.sourceCode span.ot { color: #A57800; }
-// AlertTok
-pre.sourceCode span.al { color: #CB4B16; font-weight: bold; }
-// FunctionTok
-pre.sourceCode span.fu { color: $keyword; }
-// RegionMarkerTok
-pre.sourceCode span.re { }
-// ErrorTok
-pre.sourceCode span.er { color: #D30102; font-weight: bold; }
+.sourceCode, code {
+  background-color: $background;
+  color: $foreground;
+
+  .kw { color: $keyword; }
+  .bn { color: $number; }
+  .fl { color: $number; }
+  .ch { color: $string; }
+  .st { color: $string; }
+  .co { color: $comment; }
+  .ot { color: #A57800; }
+  .al { color: #CB4B16; font-weight: bold; }
+  .fu { color: $keyword; }
+  .er { color: #D30102; font-weight: bold; }
+}
