@@ -10,10 +10,10 @@
 
 // Fade sidebar:
 //--------------
-@import "compass/css3/transition";
+@import "compass/css3";
 nav {
     opacity: 0.4;
-    @media (max-width: $small-screen) {
+    @media #{$small-only} {
         opacity: 1.0;
     }
     @include transition-property(opacity);
@@ -33,17 +33,6 @@ nav {
 
 @import "compass/layout/sticky-footer";
 @include sticky-footer(7em, ".wrapper", ".push", "footer");
-.content {
-    @media (max-width: $small-screen) {
-        @include grid-column(12);
-        padding-top: 0em;
-    }
-
-    @media #{$small} {
-        @include grid-column($columns:8, $pull:3);
-        padding: 1em;
-    }
-}
 
 footer {
     padding-top: 3em;
@@ -51,7 +40,6 @@ footer {
     p {
         text-align: center;
         max-width: none;
-        color: $tertiary-color;
     }
 }
 

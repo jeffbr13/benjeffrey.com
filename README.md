@@ -3,6 +3,7 @@ benjeffrey.com
 
 ```sh
 gem install sass compass
+bower update
 cabal update
 cabal sandbox init
 cabal install --only-dependencies

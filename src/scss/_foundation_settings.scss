@@ -1,0 +1,39 @@
+// Allows the use of rem-calc() or lower-bound() in your settings
+@import '../../bower_components/foundation/scss/foundation/functions';
+
+// The default font-size is set to 100% of the browser style sheet (usually 16px)
+// for compatibility with browser-based text zoom or user-set defaults.
+
+// Since the typical default browser font-size is 16px, that makes the calculation for grid size.
+// If you want your base font-size to be different and not have it affect the grid breakpoints,
+// set $rem-base to $base-font-size and make sure $base-font-size is a px value.
+$base-font-size: 15px;
+
+// We use this to control whether or not CSS classes come through in the gem files.
+$include-html-classes: true;
+// $include-print-styles: true;
+$include-html-global-classes: $include-html-classes;
+
+// We use these to define default font stacks
+// $font-family-sans-serif: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+$font-family-serif: "Merriweather", "DejaVu Serif", serif;
+$font-family-monospace: 'Source Code Pro', Consolas, 'DejaVu Sans Mono', monospace;;
+
+
+// We use these as default colors throughout
+// $primary-color: #008CBA;
+// $secondary-color: #e7e7e7;
+$primary-color: rgb(0,255,255);
+$secondary-color: rgb(255,0,0);
+$tertiary-color: rgb(255,0,255);
+$quaternary-color: rgb(255,255,0);
+// $alert-color: #f04124;
+// $success-color: #43AC6A;
+// $warning-color: #f08a24;
+// $info-color: #a0d3e8;
+
+$body-font-family: $font-family-serif !important;
+
+$header-font-family: "Aleo", "Roboto Slab", "DejaVu Serif", sans-serif;
+
+$list-style-position: inside;

@@ -20,3 +20,6 @@ css
 # Cabal
 cabal.sandbox.config
 .cabal-sandbox
+
+# Bower components
+bower_components

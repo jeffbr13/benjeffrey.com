@@ -1,12 +1,13 @@
-@import "normalize";
-@import "foundation/variables";
-@import "foundation";
+@import "foundation_settings";
+@import "../../bower_components/foundation/scss/foundation.scss";
 @import "layout";
 @import "code";
+@import "syntax-highlighting-solarized-light";
 
 
 // Typography:
 //------------
+@import url(https://fonts.googleapis.com/css?family=Merriweather:300,300italic,700|Source+Code+Pro);
 
 @font-face {
     font-family: 'Aleo';
@@ -19,7 +20,6 @@
     font-style: normal;
 
 }
-
 @font-face {
     font-family: 'Aleo';
     src: url('/fonts/Aleo-Regular-webfont.eot');
@@ -45,21 +45,13 @@ h1, h2, h3, h4, h5 {
 }
 
 article {
-    h1, h2, h3, h4, h5, h6 {
-        font-weight: normal;
-        text-decoration: underline;
-    }
-
     .meta {
         .description {
             margin-bottom: 1em;
         }
-        .date {
-            color: $tertiary-color;
-        }
     }
 }
 
-footer {
+body {
     font-family: $header-font-family;
 }
