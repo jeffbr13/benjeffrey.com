@@ -1,6 +1,7 @@
 {
-    "name": "benjeffrey.com",
-    "dependencies": {
-       "foundation": "~5.4.7"
-    }
+  "name": "benjeffrey.com",
+  "dependencies": {
+    "foundation": "~5.4.7",
+    "foundation-icon-fonts": "*"
+  }
 }

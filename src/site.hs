@@ -1,6 +1,5 @@
 --------------------------------------------------------------------------------
 {-# LANGUAGE OverloadedStrings #-}
-import           Data.Monoid (mappend)
 import           Hakyll
 import qualified Text.Pandoc.Options as Pandoc.Options
 
@@ -20,6 +19,7 @@ pandocWriterOptions = defaultHakyllWriterOptions
                         , Pandoc.Options.writerTableOfContents = True
                     }
 
+postsDirectory :: Pattern
 postsDirectory = "content/posts/**"
 --------------------------------------------------------------------------------
 main :: IO ()
@@ -62,6 +62,10 @@ main = hakyllWith config $ do
         route (gsubRoute "content/" (const ""))
         compile copyFileCompiler
 
+    -- copy Zurb Foundation icon fonts into fonts directory
+    match "bower_components/foundation-icon-fonts/foundation-icons*" $ do
+        route (gsubRoute "bower_components/foundation-icon-fonts/" (const "fonts/"))
+        compile copyFileCompiler
 
     -- compile SCSS:
     match "src/scss/main.scss" $do
