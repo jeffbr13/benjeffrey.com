@@ -1,19 +1,27 @@
 // Specify layout using the Foundation Grid Sass classes:
 //=======================================================
 
-.wrapper {
+.nav-wrapper {
   @include grid-row();
+}
+.nav-wrapper > * {
+  @include grid-column(12);
+}
+nav {
+  margin-bottom: 1em;
 }
 
 article {
   @include grid-row();
-  @include grid-column(12);
 
   header {
     .meta {
         margin-bottom: 1em;
     }
   }
+}
+article > * {
+  @include grid-column(12);
 }
 
 // Footer:

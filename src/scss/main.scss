@@ -7,7 +7,6 @@ $fi-path: "./fonts";
 @import "code";
 @import "syntax-highlighting-solarized-light";
 
-
 // Typography:
 //------------
 @import url(https://fonts.googleapis.com/css?family=Merriweather:300,300italic,700|Source+Code+Pro);
@@ -35,7 +34,6 @@ $fi-path: "./fonts";
 
 }
 
-
 // Fading nav area
 //----------------
 @import "compass/css3";
@@ -54,6 +52,12 @@ nav {
         opacity: 1.0;
     }
 }
+
+nav {
+  background-color: rgba(0,0,0,0.12);
+  border-bottom: solid 2em $primary-color;
+}
+
 
 // Blockquote citations to the right
 // ---------------------------------
