@@ -6,44 +6,15 @@
 }
 
 article {
+  @include grid-row();
+  @include grid-column(12);
 
   header {
-    @include grid-row();
-    @include grid-column(12);
-
     .meta {
-      .description {
-          margin-bottom: 1em;
-      }
+        margin-bottom: 1em;
     }
   }
 }
-
-main {
-  @include grid-row();
-  @include grid-column(12);
-}
-
-
-// Fade sidebar:
-//--------------
-@import "compass/css3";
-nav {
-    opacity: 0.4;
-    @media #{$small-only} {
-        opacity: 1.0;
-    }
-    @include transition-property(opacity);
-    @include transition-duration(0.5s);
-    @include transition-timing-function(ease);
-
-    &:active,
-    &:focus,
-    &:hover {
-        opacity: 1.0;
-    }
-}
-
 
 // Footer:
 //--------
