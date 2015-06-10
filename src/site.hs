@@ -20,7 +20,7 @@ pandocWriterOptions = defaultHakyllWriterOptions
                     }
 
 postsDirectory :: Pattern
-postsDirectory = "content/posts/**"
+postsDirectory = "posts/**"
 --------------------------------------------------------------------------------
 main :: IO ()
 main = hakyllWith config $ do
