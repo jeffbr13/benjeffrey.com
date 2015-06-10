@@ -2,9 +2,26 @@
 //=======================================================
 
 .wrapper {
-    @media #{$small} {
-        @include grid-row;
+  @include grid-row();
+}
+
+article {
+
+  header {
+    @include grid-row();
+    @include grid-column(12);
+
+    .meta {
+      .description {
+          margin-bottom: 1em;
+      }
     }
+  }
+}
+
+main {
+  @include grid-row();
+  @include grid-column(12);
 }
 
 

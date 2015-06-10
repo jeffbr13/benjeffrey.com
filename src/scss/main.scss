@@ -32,22 +32,18 @@
 
 }
 
+// Blockquote citations to the right
+// ---------------------------------
 cite {
     display: block;
     text-align: right;
 }
 
+// Invisible heading links
+// -----------------------
 h1, h2, h3, h4, h5 {
     a {
         color: inherit;
         text-decoration: none;
-    }
-}
-
-article {
-    .meta {
-        .description {
-            margin-bottom: 1em;
-        }
     }
 }
