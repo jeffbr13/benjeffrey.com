@@ -4,8 +4,7 @@ $fi-path: "./fonts";
 @import "../../bower_components/foundation/scss/foundation.scss";
 @import "../../bower_components/foundation-icon-fonts/foundation-icons";
 @import "layout";
-@import "code";
-@import "syntax-highlighting-solarized-light";
+@import "code/solarized-light";
 
 // Typography:
 //------------
