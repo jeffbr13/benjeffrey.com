@@ -4,15 +4,15 @@ description: Where Ben Jeffrey has been, and what he's done.
 ---
 
 <aside class="right">
-    <ul class="vcard">
-      <li class="fn">Ben Jeffrey</li>
-      <li class="nickname">jeffbr13</li>
-      <li class="locality">Edinburgh</li>
-      <li class="country-name">United Kingdom</li>
-      <li class="tel">07974607509</li>
-      <li><a href="mailto:mail@benjeffrey.net" class="email">mail@benjeffrey.net</a></li>
-      <li><a class="url" href="https://benjeffrey.com">benjeffrey.com</a></li>
-    </ul>
+<ul class="vcard">
+  <li class="fn">Ben Jeffrey</li>
+  <li class="nickname">jeffbr13</li>
+  <li class="locality">Edinburgh</li>
+  <li class="country-name">United Kingdom</li>
+  <li class="tel">07974607509</li>
+  <li><a href="mailto:mail@benjeffrey.net" class="email">mail@benjeffrey.net</a></li>
+  <li><a class="url" href="https://benjeffrey.com">benjeffrey.com</a></li>
+</ul>
 </aside>
 
 
